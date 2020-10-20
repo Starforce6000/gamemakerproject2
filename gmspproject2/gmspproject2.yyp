@@ -1,6 +1,12 @@
 {
   "resources": [
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"s_testThrust","path":"sprites/s_testThrust/s_testThrust.yy",},"order":2,},
+    {"id":{"name":"o_shipManager","path":"objects/o_shipManager/o_shipManager.yy",},"order":1,},
+    {"id":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"order":2,},
+    {"id":{"name":"s_testShip","path":"sprites/s_testShip/s_testShip.yy",},"order":0,},
+    {"id":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"order":0,},
+    {"id":{"name":"s_testManeuver","path":"sprites/s_testManeuver/s_testManeuver.yy",},"order":3,},
+    {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -16,7 +22,7 @@
     "children": [],
   },
   "RoomOrder": [
-    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
+    {"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

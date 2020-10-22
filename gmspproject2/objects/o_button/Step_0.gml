@@ -22,6 +22,16 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 		case "Job Board":
 			break;
 		case "Outfitting":
+			pos = 100
+			for(i = 0; i < o_shipManager.outfits; i++) {
+				outfitButton = instance_create_layer(300, pos, "UI", o_button)
+				outfitButton.button = "Purchase"
+				outfitButton.purchaseType = "Outfit"
+				outfitButton.outfitID = i
+				outfitButton.price = 0
+				outfitButton.outfit = o_shipManager.outfitNames[outfitButton.outfitID]
+				pos += 50;
+			}
 			break;
 		case "Shipyard":
 			break;
@@ -31,7 +41,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 			if (purchaseType == "Ship") {
 				
 			} else if (purchaseType == "Outfit") {
-				
+				o_gameManager.playerModules[moduleCount] = outfitID
 			}
 			break;
 		case "Accept":

@@ -5,6 +5,7 @@ shipSprites =
 [s_testShip]
 
 //OUTFIT INFO
+outfits = 2
 thrusterSprites = 
 [s_testThrust]
 maneuverSprites = 
@@ -13,3 +14,6 @@ thrusterAccel =
 [4]
 maneuverRate =
 [90]
+outfitNames = 
+["Test Thruster", 
+"Test Maneuvering Thruster"]

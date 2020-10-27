@@ -1,3 +1,11 @@
+/// @description EXIT SUBMENU
+for(i = 0; i < buttonCount; i++) {
+	instance_destroy(outfitMenuButton[i])
+}
+for(i = 0; i < 3; i++) {
+	instance_destroy(menuDividers[i])
+}
+
 menu = "station"
 
 instance_destroy(menuButton[0])

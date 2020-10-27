@@ -1,15 +1,15 @@
-shipID = 0
-thrusterID = 0
-maneuverID = 0
+shipID = o_gameManager.playerShipID
+thrusterID = o_gameManager.playerThrusterID
+maneuverID = o_gameManager.playerManeuverID
 
-acceleration = o_shipManager.thrusterAccel[thrusterID]
-turn = o_shipManager.maneuverRate[maneuverID]
+acceleration = o_shipManager.thrusterStats[thrusterID]
+turn = o_shipManager.thrusterStats[maneuverID]
 
 class = o_shipManager.shipNames[shipID]
 
 sprite_index = o_shipManager.shipSprites[shipID]
 plrThrust = o_shipManager.thrusterSprites[thrusterID]
-plrManeuver = o_shipManager.maneuverSprites[maneuverID]
+plrManeuver = o_shipManager.thrusterSprites[maneuverID]
 
 thrustL = false
 thrustR = false

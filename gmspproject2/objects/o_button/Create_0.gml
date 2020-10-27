@@ -1,6 +1,7 @@
 //Initialization
 button = ""
 purchaseType = ""
+selected = false
 
 //OUTFITTING
 outfit = ""

@@ -32,7 +32,13 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 				event_perform(ev_other, ev_user3)	
 			}
 			break;
+		case "Selector":
+			selected = true
+			break;
 		case "Purchase":
+			with (o_gameManager) {
+				
+			}
 			break;
 		case "Accept":
 			break;

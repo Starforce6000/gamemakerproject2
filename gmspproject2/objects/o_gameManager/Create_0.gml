@@ -9,3 +9,5 @@ menuButton = [0, 0, 0, 0, 0, 0]
 
 playButton = instance_create_layer(700, 500, "UI", o_button)
 playButton.button = "Start Game"
+
+menu = "main"

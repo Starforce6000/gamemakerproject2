@@ -1,5 +1,7 @@
 menu = "station"
 
+instance_destroy(menuButton[0])
+
 menuButton[0] = instance_create_layer(200, 500, "UI", o_button)
 menuButton[0].button = "Undock"
 

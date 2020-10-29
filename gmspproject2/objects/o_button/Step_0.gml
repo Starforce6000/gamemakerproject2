@@ -5,42 +5,45 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 				event_perform(ev_other, ev_user0)
 			}
 			instance_destroy()
-			break;	
+			break
 		case "Undock":
 			with(o_gameManager) {
 				event_perform(ev_other, ev_user1)
 			}
-			break;
+			break
 		case "Commodities":
-			break;
+			break
 		case "Job Board":
-			break;
+			break
 		case "Outfitting":
 			with (o_gameManager) {
 				event_perform(ev_other, ev_user2)	
 			}
-			break;
+			break
 		case "Shipyard":
 			with (o_gameManager) {
 				event_perform(ev_other, ev_user4)	
 			}
-			break;
+			break
 		case "Storage":
-			break;
+			break
 		case "Exit":
 			with (o_gameManager) {
 				event_perform(ev_other, ev_user3)	
 			}
-			break;
+			break
 		case "Selector":
-			selected = true
-			break;
+			o_gameManager.purchaseType = purchaseType
+			o_gameManager.purchaseID = itemID
+			o_gameManager.selected = buttonID
+			o_gameManager.purchaseName = item
+			break
 		case "Purchase":
 			with (o_gameManager) {
-				
+				event_perform(ev_other, ev_user5)	
 			}
-			break;
+			break
 		case "Accept":
-			break;
+			break
 	}
 }

@@ -6,9 +6,13 @@ playerManeuverID = 1
 //Initialization
 player = 0
 menuButton = [0, 0, 0, 0, 0, 0]
-outfitMenuButton = [0]
+subMenuButton = [0]
 buttonCount = 0
 menuDividers = [0, 0, 0]
+purchaseType = ""
+purchaseName = ""
+purchaseID = -1
+selected = -1
 
 playButton = instance_create_layer(700, 500, "UI", o_button)
 playButton.button = "Start Game"

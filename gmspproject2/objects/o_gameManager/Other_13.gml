@@ -1,14 +1,14 @@
 /// @description EXIT SUBMENU
 for(i = 0; i < buttonCount; i++) {
-	instance_destroy(outfitMenuButton[i])
+	instance_destroy(subMenuButton[i])
 }
 for(i = 0; i < 3; i++) {
 	instance_destroy(menuDividers[i])
 }
+instance_destroy(menuButton[0])
+instance_destroy(menuButton[1])
 
 menu = "station"
-
-instance_destroy(menuButton[0])
 
 menuButton[0] = instance_create_layer(200, 500, "UI", o_button)
 menuButton[0].button = "Undock"

@@ -3,22 +3,40 @@ shipNames =
 ["Test Ship"]
 shipSprites =
 [s_testShip]
+outfitSpace =
+[150]
+turretPorts =
+[1]
+gunPorts = 
+[1]
+speedModifier =
+[1]
 
 //OUTFIT INFO
-thrusterOutfits = 2
+thrusterOutfits = 4
 weaponOutfits = 4
 miscOutfits = 6
 totalOutfits = thrusterOutfits + weaponOutfits + miscOutfits
 
 //Thrusters
 thrusterNames = 
-["x150 Small Ion Thruster", "k150 Small Ion RCS"]
-thrusterSprites = 
-[s_testThrust, s_testManeuver]
-thrusterStats =
-[4, 90]
+["x150 Small Ion Thruster", "k150 Small Ion RCS",
+"x250 Medium Ion Thruster", "k250 Medium Ion RCS"]
+thrusterType =
+["main", "maneuvering",
+"main", "maneuvering"]
 thrusterSpaceUse =
-[30,20]
+[30, 20,
+65, 50]
+thrusterSprites = 
+[s_testThrust, s_testManeuver,
+s_testThrust, s_testThrust]
+thrusterStats =
+[4, 90,
+7, 140]
+thrusterCost =
+[5000, 4500,
+15000, 14000]
 
 //Weapons
 //For beam weapons, rate should be 0 and all values are per second instead of per shot.
@@ -43,6 +61,9 @@ weaponEnergyUse =
 rate = 
 [5, 5/3,
 0, 0]
+weaponCost =
+[1000, 3500,
+2000, 5500]
 
 
 //Misc Outfits
@@ -62,3 +83,6 @@ cooling =
 cargoCapacity =
 [0, 0, 0,
 10, 150, 600]
+outfitCost =
+[750, 1500, 3500,
+500, 7500, 35000]

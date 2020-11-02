@@ -11,6 +11,4 @@ sprite_index = o_shipManager.shipSprites[shipID]
 plrThrust = o_shipManager.thrusterSprites[thrusterID]
 plrManeuver = o_shipManager.thrusterSprites[maneuverID]
 
-thrustL = false
-thrustR = false
 thrust = false

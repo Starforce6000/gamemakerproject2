@@ -4,11 +4,11 @@ shipNames =
 shipSprites =
 [s_testShip]
 outfitSpace =
-[150]
+[200]
 turretPorts =
-[1]
+[2]
 gunPorts = 
-[1]
+[2]
 speedModifier =
 [1]
 

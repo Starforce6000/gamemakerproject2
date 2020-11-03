@@ -2,10 +2,12 @@
 playerShipID = 0
 playerThrusterID = 0
 playerManeuverID = 1
-playerGunports = [0, -1, -1, -1, -1, -1]
+playerGunports = [-1, -1, -1, -1, -1, -1]
 playerTurretports = [-1, -1, -1, -1]
 playerCredits = 99999
 modulesEquipped = 0
+gunsEquipped = 0
+turretsEquipped = 0
 playerModules = [-1]
 
 //Initialization

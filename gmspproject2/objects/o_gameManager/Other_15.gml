@@ -34,8 +34,35 @@ if(purchaseID != -1) {
 			}
 			break
 		case "Weapon":
+			if(o_shipManager.weaponType[purchaseID] == "gun") {
+				if((remainingOutfitSpace >= o_shipManager.weaponSpaceUse[purchaseID]) && (gunsEquipped < o_shipManager.gunPorts[playerShipID])) {
+					if(playerCredits >= o_shipManager.weaponCost[purchaseID]) {
+						playerCredits -= o_shipManager.weaponCost[purchaseID]
+						playerCredits += o_shipManager.weaponCost[playerThrusterID]
+						playerGunports[gunsEquipped] = purchaseID
+						gunsEquipped++
+					}
+				}
+			} else {
+				if((remainingOutfitSpace >= o_shipManager.weaponSpaceUse[purchaseID]) && (turretsEquipped < o_shipManager.turretPorts[playerShipID])) {
+					if(playerCredits >= o_shipManager.weaponCost[purchaseID]) {
+						playerCredits -= o_shipManager.weaponCost[purchaseID]
+						playerCredits += o_shipManager.weaponCost[playerManeuverID]
+						playerTurretports[turretsEquipped] = purchaseID
+						turretsEquipped++
+					}
+				}
+			}
 			break
 		case "Misc":
+			if(remainingOutfitSpace >= o_shipManager.spaceUse[purchaseID]) {
+				if(playerCredits >= o_shipManager.outfitCost[purchaseID]) {
+					playerCredits -= o_shipManager.outfitCost[purchaseID]
+					playerCredits += o_shipManager.outfitCost[playerManeuverID]
+					playerModules[modulesEquipped] = purchaseID
+					modulesEquipped++
+				}
+			}
 			break
 	}
 }

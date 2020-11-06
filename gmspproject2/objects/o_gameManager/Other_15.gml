@@ -3,14 +3,15 @@ if(purchaseID != -1) {
 	remainingOutfitSpace = o_shipManager.outfitSpace[playerShipID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[playerThrusterID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[playerManeuverID]
-	for(i = 0; i < gunsEquipped; i++) {
-		remainingOutfitSpace -= o_shipManager.weaponSpaceUse[playerGunports[i]]
+	for(i = 0; i < 6; i++) {
+		if(playerGunports[i] != -1 ) {
+			remainingOutfitSpace -= o_shipManager.weaponSpaceUse[playerGunports[i]]
+		}
 	}
-	for(i = 0; i < turretsEquipped; i++) {
-		remainingOutfitSpace -= o_shipManager.weaponSpaceUse[playerTurretports[i]]
-	}
-	for(i = 0; i < modulesEquipped; i++) {
-		remainingOutfitSpace -= o_shipManager.spaceUse[playerModules[i]]
+	for(i = 0; i < 4; i++) {
+		if(playerTurretports[i] != -1 ) {
+			remainingOutfitSpace -= o_shipManager.weaponSpaceUse[playerTurretports[i]]
+		}
 	}
 	switch (purchaseType) {
 		case "Thruster":
@@ -57,7 +58,7 @@ if(purchaseID != -1) {
 			if(remainingOutfitSpace >= o_shipManager.spaceUse[purchaseID]) {
 				if(playerCredits >= o_shipManager.outfitCost[purchaseID]) {
 					playerCredits -= o_shipManager.outfitCost[purchaseID]
-					playerCredits += o_shipManager.outfitCost[purchaseID]
+					playerCredits += o_shipManager.outfitCost[playerManeuverID]
 					playerModules[modulesEquipped] = purchaseID
 					modulesEquipped++
 				}

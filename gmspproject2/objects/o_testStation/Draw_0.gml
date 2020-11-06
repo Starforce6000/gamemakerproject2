@@ -1,0 +1,1 @@
+draw_sprite(s_testStation, s_testStation, 1000, 250)

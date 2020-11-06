@@ -12,6 +12,7 @@ playerModules = [-1]
 
 //Initialization
 player = 0
+testStation = 0
 menuButton = [0, 0, 0, 0, 0, 0]
 subMenuButton = [0]
 buttonCount = 0

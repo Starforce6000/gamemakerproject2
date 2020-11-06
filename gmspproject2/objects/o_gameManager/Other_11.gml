@@ -6,6 +6,7 @@ for(i = 0; i < 6; i++) {
 }
 
 player = instance_create_layer(500, 500, "Player", o_playerShip)
+testStation = instance_create_layer(1000, 250, "Stations", o_testStation)
 
 for(i = 0; i < gunsEquipped; i++) {
 	player.guns[i] = o_shipManager.weaponNames[playerGunports[i]]

@@ -6,11 +6,15 @@
     {"id":{"name":"s_button","path":"sprites/s_button/s_button.yy",},"order":4,},
     {"id":{"name":"o_shipManager","path":"objects/o_shipManager/o_shipManager.yy",},"order":1,},
     {"id":{"name":"o_button","path":"objects/o_button/o_button.yy",},"order":3,},
+    {"id":{"name":"r_testStation","path":"rooms/r_testStation/r_testStation.yy",},"order":1,},
     {"id":{"name":"s_outfitButton","path":"sprites/s_outfitButton/s_outfitButton.yy",},"order":5,},
+    {"id":{"name":"o_testStation","path":"objects/o_testStation/o_testStation.yy",},"order":5,},
     {"id":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"order":2,},
+    {"id":{"name":"s_testStationRoom","path":"sprites/s_testStationRoom/s_testStationRoom.yy",},"order":9,},
     {"id":{"name":"s_testShip","path":"sprites/s_testShip/s_testShip.yy",},"order":0,},
     {"id":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"order":0,},
     {"id":{"name":"s_box","path":"sprites/s_box/s_box.yy",},"order":7,},
+    {"id":{"name":"s_testStation","path":"sprites/s_testStation/s_testStation.yy",},"order":8,},
     {"id":{"name":"s_testManeuver","path":"sprites/s_testManeuver/s_testManeuver.yy",},"order":3,},
     {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},"order":0,},
   ],
@@ -29,6 +33,7 @@
   },
   "RoomOrder": [
     {"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},
+    {"name":"r_testStation","path":"rooms/r_testStation/r_testStation.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

@@ -1,9 +1,12 @@
 {
   "spriteId": null,
   "solid": false,
-  "visible": false,
-  "spriteMaskId": null,
-  "persistent": true,
+  "visible": true,
+  "spriteMaskId": {
+    "name": "s_testStation",
+    "path": "sprites/s_testStation/s_testStation.yy",
+  },
+  "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
@@ -18,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_shipManager","path":"objects/o_shipManager/o_shipManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_testStation","path":"objects/o_testStation/o_testStation.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -27,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_shipManager",
+  "name": "o_testStation",
   "tags": [],
   "resourceType": "GMObject",
 }

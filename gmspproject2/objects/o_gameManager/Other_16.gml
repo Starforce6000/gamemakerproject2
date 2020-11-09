@@ -1,4 +1,4 @@
-/// @description START GAME
+/// @description DOCK AT STATION
 
 menu = "station"
 
@@ -19,3 +19,5 @@ menuButton[4].button = "Job Board"
 
 menuButton[5] = instance_create_layer(1150, 700, "UI", o_button)
 menuButton[5].button = "Shipyard"
+
+instance_destroy(player)

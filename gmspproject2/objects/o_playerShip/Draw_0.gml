@@ -8,7 +8,7 @@ draw_sprite_ext(plrThrust, thrust, x, y, 1, 1, image_angle, c_white, 1)
 
 
 //JUST FOR TESTING
-
+/*
 pos = 100
 draw_text(100,pos,"WEAPONS EQUIPPED:")
 pos += 20
@@ -31,3 +31,4 @@ pos += 20
 draw_text(100, pos, o_shipManager.thrusterNames[thrusterID])
 pos += 20
 draw_text(100, pos, o_shipManager.thrusterNames[maneuverID])
+*/

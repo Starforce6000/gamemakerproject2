@@ -1,22 +1,21 @@
 //SHIP INFO
 shipNames = 
-["Test Ship"]
+["Test Ship", "Test Medium Ship", "Test Large Ship"]
 shipSprites =
-[s_testShip]
+[s_testShip, s_testMediumShip, s_testLargeShip]
 outfitSpace =
-[200]
+[150, 300, 700]
 turretPorts =
-[2]
+[2, 2, 6]
 gunPorts = 
-[2]
+[2, 4, 4]
 speedModifier =
-[1]
+[1, 0.3, 0.1]
 
 //OUTFIT INFO
 thrusterOutfits = 4
 weaponOutfits = 4
 miscOutfits = 6
-totalOutfits = thrusterOutfits + weaponOutfits + miscOutfits
 
 //Thrusters
 thrusterNames = 

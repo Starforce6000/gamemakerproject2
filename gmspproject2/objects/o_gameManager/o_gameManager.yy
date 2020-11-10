@@ -1,7 +1,7 @@
 {
   "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": true,
   "parentObjectId": null,
@@ -27,6 +27,7 @@
     {"isDnD":false,"eventNum":15,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":16,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

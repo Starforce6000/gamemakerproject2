@@ -14,5 +14,5 @@ for(i = 0; i < turretsEquipped; i++) {
 	player.turrets[i] = o_shipManager.weaponNames[playerTurretports[i]]
 }
 
-player.x = o_station.x
-player.y = o_station.y
+player.x = dockStation.x
+player.y = dockStation.y

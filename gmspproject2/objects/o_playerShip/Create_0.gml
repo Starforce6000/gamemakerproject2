@@ -15,3 +15,4 @@ guns = [-1]
 turrets = [-1]
 
 thrust = false
+pauseSpeed = 0

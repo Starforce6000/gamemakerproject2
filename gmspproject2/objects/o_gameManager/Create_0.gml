@@ -25,12 +25,17 @@ purchaseType = ""
 purchaseName = ""
 purchaseID = -1
 selected = -1
+dispX = 0
+dispY = 0
+mapStars = [0]
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+systemCount = 2
 systemName = ["Sol", "Alpha Centauri"]
-systemX = [0, 20]
-systemY = [0, 35]
+systemX = [0, 40]
+systemY = [0, 55]
+systemInhabited = [true, true]
 
 playButton = instance_create_layer(700, 500, "UI", o_button)
 playButton.button = "Start Game"

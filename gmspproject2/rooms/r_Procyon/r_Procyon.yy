@@ -52,7 +52,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "r_AlphaCentauri",
+  "name": "r_Procyon",
   "tags": [],
   "resourceType": "GMRoom",
 }

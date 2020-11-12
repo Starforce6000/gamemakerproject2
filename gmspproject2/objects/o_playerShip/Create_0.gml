@@ -16,3 +16,6 @@ turrets = [-1]
 
 thrust = false
 pauseSpeed = 0
+
+systemJumpTimer = -1
+jumping = false

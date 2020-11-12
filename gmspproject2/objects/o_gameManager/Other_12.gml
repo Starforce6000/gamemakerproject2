@@ -60,3 +60,4 @@ for(i = 0; i < o_shipManager.miscOutfits; i++) {
 	buttonCount++
 }
 purchaseID = -1
+selected = -1

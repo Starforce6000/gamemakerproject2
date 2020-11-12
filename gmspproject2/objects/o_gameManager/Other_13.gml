@@ -27,3 +27,5 @@ menuButton[4].button = "Job Board"
 
 menuButton[5] = instance_create_layer(1150, 700, "UI", o_button)
 menuButton[5].button = "Shipyard"
+
+selected = -1

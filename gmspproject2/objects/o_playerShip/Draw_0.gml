@@ -4,7 +4,7 @@ if(o_gameManager.menu == "") {
 	//Draw engines
 	draw_sprite_ext(plrThrust, thrust, x, y, 1, 1, image_angle, c_white, 1)
 	//Draw docking helper
-	if(place_meeting(x,y,o_station) && (speed <= 0.25)) {
+	if(place_meeting(x,y,o_station) && (speed <= 0.25) && !jumping) {
 		draw_sprite_ext(s_box, 0, x, y + 110, 3, .5, 0, c_white, 1)
 		draw_text(x - 77,y + 100, "Press 'L' To Dock")
 	}
@@ -16,7 +16,14 @@ if(o_gameManager.menu == "") {
 	year = o_gameManager.year
 	printStr = string(system) + " system - " + month + " " + string(day) + ", " + string(year)
 	draw_text(x - 650, y + 350, printStr)
+	
+	//Draw jump progress bar
+	if(jumping) {
+		//draw_rectangle(x - 70, y + 40, x + 70, y + 50, false)
+		draw_rectangle(x - 70, y + 40, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 50, false)
+	}
 }
+
 
 //JUST FOR TESTING
 /*

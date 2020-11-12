@@ -31,11 +31,12 @@ mapStars = [0]
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-systemCount = 2
-systemName = ["Sol", "Alpha Centauri"]
-systemX = [0, 40]
-systemY = [0, 55]
-systemInhabited = [true, true]
+systemCount = 6
+systemName = ["Sol", "Alpha Centauri", "Sirius", "Procyon", "Epsilon", "Ceti"]
+systemX = [0, 40, -20, 80, -65, 100]
+systemY = [0, 55, -80, -40, 75, 30]
+systemInhabited = [true, true, true, true, true, true, false]
+systemRoom = [r_Sol, r_AlphaCentauri, r_Sirius, r_Procyon, r_Epsilon, r_Ceti]
 
 playButton = instance_create_layer(700, 500, "UI", o_button)
 playButton.button = "Start Game"

@@ -3,12 +3,12 @@ if(menu == "map") {
 	for(i = 0; i < systemCount; i++) {
 		instance_destroy(mapStars[i])
 	}
-	selected = -1
 	with(o_playerShip) {
 		event_perform(ev_other, ev_user1)
 	}
 } else {
 	menu = "map"
+	selected = -1
 	dispX = -683
 	dispY = -384
 	for(i = 0; i < systemCount; i++) {

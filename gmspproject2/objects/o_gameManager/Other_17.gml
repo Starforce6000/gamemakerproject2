@@ -12,4 +12,6 @@ if((selected != -1) && (inRange == true)) {
 			month = 1
 		}
 	}
+	player.x = room_width/2 + random_range(-600,600)
+	player.y = room_height/2 + random_range(-600,600)
 }

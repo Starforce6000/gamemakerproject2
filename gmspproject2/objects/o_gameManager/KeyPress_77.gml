@@ -6,9 +6,8 @@ if(menu == "map") {
 	with(o_playerShip) {
 		event_perform(ev_other, ev_user1)
 	}
-} else {
+} else if(o_playerShip.jumping == false) {
 	menu = "map"
-	selected = -1
 	dispX = -683
 	dispY = -384
 	for(i = 0; i < systemCount; i++) {

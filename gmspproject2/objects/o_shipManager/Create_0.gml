@@ -73,10 +73,10 @@ miscNames =
 spaceUse =
 [5, 6, 15,
 10, 75, 300]
-energyUse =
-[0, 50, 0,
+energyGeneration =
+[0, -50, 0,
 0, 0, 0]
-cooling = 
+heatGeneration = 
 [200, 350, 750,
 0, 0, 0]
 cargoCapacity =

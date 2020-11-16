@@ -28,15 +28,16 @@ selected = -1
 dispX = 0
 dispY = 0
 mapStars = [0]
+inRange = true
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-systemCount = 6
-systemName = ["Sol", "Alpha Centauri", "Sirius", "Procyon", "Epsilon", "Ceti"]
-systemX = [0, 40, -20, 80, -65, 100]
-systemY = [0, 55, -80, -40, 75, 30]
-systemInhabited = [true, true, true, true, true, true, false]
-systemRoom = [r_Sol, r_AlphaCentauri, r_Sirius, r_Procyon, r_Epsilon, r_Ceti]
+systemCount = 7
+systemName = ["Sol", "Alpha Centauri", "Sirius", "Procyon", "Epsilon", "Ceti", "Denebola"]
+systemX = [0, 40, -20, 80, -65, 100, 70]
+systemY = [0, 55, -80, -40, 75, 30, 120]
+systemInhabited = [true, true, true, true, true, false, false]
+systemRoom = [r_Sol, r_AlphaCentauri, r_Sirius, r_Procyon, r_Epsilon, r_Ceti, r_Denebola]
 
 playButton = instance_create_layer(700, 500, "UI", o_button)
 playButton.button = "Start Game"

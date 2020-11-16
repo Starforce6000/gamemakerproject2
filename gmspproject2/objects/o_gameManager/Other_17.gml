@@ -1,9 +1,8 @@
 /// @description JUMP SYSTEMS
-if(selected != -1) {
+if((selected != -1) && (inRange == true)) {
 	system = selected
 	room_goto(systemRoom[system])
 	selected = -1
-	
 	day += 1
 	if(day == 31) {
 		month += 1

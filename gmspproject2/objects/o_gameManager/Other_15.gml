@@ -38,7 +38,6 @@ if(purchaseID != -1) {
 				if((remainingOutfitSpace >= o_shipManager.weaponSpaceUse[purchaseID]) && (gunsEquipped < o_shipManager.gunPorts[playerShipID])) {
 					if(playerCredits >= o_shipManager.weaponCost[purchaseID]) {
 						playerCredits -= o_shipManager.weaponCost[purchaseID]
-						playerCredits += o_shipManager.weaponCost[playerThrusterID]
 						playerGunports[gunsEquipped] = purchaseID
 						gunsEquipped++
 					}
@@ -47,7 +46,6 @@ if(purchaseID != -1) {
 				if((remainingOutfitSpace >= o_shipManager.weaponSpaceUse[purchaseID]) && (turretsEquipped < o_shipManager.turretPorts[playerShipID])) {
 					if(playerCredits >= o_shipManager.weaponCost[purchaseID]) {
 						playerCredits -= o_shipManager.weaponCost[purchaseID]
-						playerCredits += o_shipManager.weaponCost[playerManeuverID]
 						playerTurretports[turretsEquipped] = purchaseID
 						turretsEquipped++
 					}
@@ -58,7 +56,6 @@ if(purchaseID != -1) {
 			if(remainingOutfitSpace >= o_shipManager.spaceUse[purchaseID]) {
 				if(playerCredits >= o_shipManager.outfitCost[purchaseID]) {
 					playerCredits -= o_shipManager.outfitCost[purchaseID]
-					playerCredits += o_shipManager.outfitCost[playerManeuverID]
 					playerModules[modulesEquipped] = purchaseID
 					modulesEquipped++
 				}

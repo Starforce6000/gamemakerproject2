@@ -14,7 +14,7 @@ menuButton[0] = instance_create_layer(200, 500, "UI", o_button)
 menuButton[0].button = "Undock"
 
 menuButton[1] = instance_create_layer(1150, 500, "UI", o_button)
-menuButton[1].button = "Storage"
+menuButton[1].button = "Skills"
 
 menuButton[2] = instance_create_layer(200, 600, "UI", o_button)
 menuButton[2].button = "Commodities"
@@ -29,3 +29,5 @@ menuButton[5] = instance_create_layer(1150, 700, "UI", o_button)
 menuButton[5].button = "Shipyard"
 
 selected = -1
+purchaseID = -1
+purchaseType = ""

@@ -2,7 +2,9 @@ if(o_gameManager.menu == "") {
 	//Draw ship
 	draw_self()
 	//Draw engines
-	draw_sprite_ext(plrThrust, thrust, x, y, 1, 1, image_angle, c_white, 1)
+	if(!jumping) {
+		draw_sprite_ext(plrThrust, thrust, x, y, 1, 1, image_angle, c_white, 1)
+	}
 	//Draw docking helper
 	if(place_meeting(x,y,o_station) && (speed <= 0.25) && !jumping) {
 		draw_sprite_ext(s_box, 0, x, y + 110, 3, .5, 0, c_white, 1)

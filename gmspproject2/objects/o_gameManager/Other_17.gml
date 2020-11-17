@@ -14,4 +14,5 @@ if((selected != -1) && (inRange == true)) {
 	}
 	player.x = room_width/2 + random_range(-600,600)
 	player.y = room_height/2 + random_range(-600,600)
+	player.speed = player.speed * 0.1;
 }

@@ -40,13 +40,38 @@ if(button == "Purchase") {
 		space = "Outfit Space: " + string(o_shipManager.weaponSpaceUse[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, space)
 		pos -= 30
-	} else if(o_gameManager.purchaseID != -1) {
+	} else if(o_gameManager.purchaseType == "Ship") {
+		draw_text(x-450, y-pos, "SHIP INFO")
+	} else if(o_gameManager.purchaseID != -1 ) {
 		cost = "Cost: " + string(o_shipManager.outfitCost[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, cost)
 		pos -= 30
 		space = "Outfit Space: " + string(o_shipManager.spaceUse[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, space)
 		pos -= 30
+		if(o_shipManager.energyGeneration[o_gameManager.purchaseID] > 0) {
+			energy = "Energy Generation: " + string(o_shipManager.energyGeneration[o_gameManager.purchaseID])
+			draw_text(x-450, y-pos, energy)
+			pos -= 30
+		} else if(o_shipManager.energyGeneration[o_gameManager.purchaseID] < 0) {
+			energy = "Energy Use: " + string(o_shipManager.energyGeneration[o_gameManager.purchaseID] * -1)
+			draw_text(x-450, y-pos, energy)
+			pos -= 30
+		}
+		if(o_shipManager.heatGeneration[o_gameManager.purchaseID] > 0) {
+			heat = "Heat Generation: " + string(o_shipManager.heatGeneration[o_gameManager.purchaseID])
+			draw_text(x-450, y-pos, heat)
+			pos -= 30
+		} else if(o_shipManager.heatGeneration[o_gameManager.purchaseID] < 0) {
+			heat = "Cooling: " + string(o_shipManager.heatGeneration[o_gameManager.purchaseID] * -1)
+			draw_text(x-450, y-pos, heat)
+			pos -= 30
+		}
+		if(o_shipManager.cargoCapacity[o_gameManager.purchaseID] > 0) {
+			cargo = "Cargo Capacity: " + string(o_shipManager.cargoCapacity[o_gameManager.purchaseID])
+			draw_text(x-450, y-pos, cargo)
+			pos -= 30
+		}
 	}
 	pos = 130
 	credits = "Your Credits: " + string(o_gameManager.playerCredits)
@@ -55,15 +80,14 @@ if(button == "Purchase") {
 	remainingOutfitSpace = o_shipManager.outfitSpace[o_gameManager.playerShipID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[o_gameManager.playerThrusterID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[o_gameManager.playerManeuverID]
-	for(i = 0; i < 6; i++) {
-		if(o_gameManager.playerGunports[i] != -1 ) {
-			remainingOutfitSpace -= o_shipManager.weaponSpaceUse[o_gameManager.playerGunports[i]]
-		}
+	for(i = 0; i < o_gameManager.gunsEquipped; i++) {
+		remainingOutfitSpace -= o_shipManager.weaponSpaceUse[o_gameManager.playerGunports[i]]
 	}
-	for(i = 0; i < 4; i++) {
-		if(o_gameManager.playerTurretports[i] != -1 ) {
-			remainingOutfitSpace -= o_shipManager.weaponSpaceUse[o_gameManager.playerTurretports[i]]
-		}
+	for(i = 0; i < o_gameManager.turretsEquipped; i++) {
+		remainingOutfitSpace -= o_shipManager.weaponSpaceUse[o_gameManager.playerTurretports[i]]
+	}
+	for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+		remainingOutfitSpace -= o_shipManager.spaceUse[o_gameManager.playerModules[i]]
 	}
 	remainingOutfits = "Remaning Outfit Space: " + string(remainingOutfitSpace)
 	draw_text(x-450, y-pos, remainingOutfits)

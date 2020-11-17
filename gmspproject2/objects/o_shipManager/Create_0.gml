@@ -1,8 +1,13 @@
 //SHIP INFO
+ships = 3
 shipNames = 
-["Test Ship", "Test Medium Ship", "Test Large Ship"]
+["Finch", "Vulture", "Falcon"]
 shipSprites =
 [s_testShip, s_testMediumShip, s_testLargeShip]
+shipSize =
+["small", "medium", "large"]
+shipCost = 
+[20000, 150000, 2500000]
 outfitSpace =
 [150, 300, 700]
 turretPorts =
@@ -77,7 +82,7 @@ energyGeneration =
 [0, -50, 0,
 0, 0, 0]
 heatGeneration = 
-[200, 350, 750,
+[-200, -350, -750,
 0, 0, 0]
 cargoCapacity =
 [0, 0, 0,

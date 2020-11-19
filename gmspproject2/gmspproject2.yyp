@@ -46,6 +46,7 @@
     {"id":{"name":"s_greenGalaxy","path":"sprites/s_greenGalaxy/s_greenGalaxy.yy",},"order":20,},
     {"id":{"name":"s_civilian","path":"sprites/s_civilian/s_civilian.yy",},"order":4,},
     {"id":{"name":"s_singleBlaster","path":"sprites/s_singleBlaster/s_singleBlaster.yy",},"order":0,},
+    {"id":{"name":"r_Sprites","path":"rooms/r_Sprites/r_Sprites.yy",},"order":21,},
     {"id":{"name":"r_Sirius","path":"rooms/r_Sirius/r_Sirius.yy",},"order":2,},
     {"id":{"name":"r_Denebola","path":"rooms/r_Denebola/r_Denebola.yy",},"order":6,},
     {"id":{"name":"o_navy","path":"objects/o_navy/o_navy.yy",},"order":1,},
@@ -113,6 +114,7 @@
     {"name":"r_Eradani","path":"rooms/r_Eradani/r_Eradani.yy",},
     {"name":"r_Polaris","path":"rooms/r_Polaris/r_Polaris.yy",},
     {"name":"r_Alinyat","path":"rooms/r_Alinyat/r_Alinyat.yy",},
+    {"name":"r_Sprites","path":"rooms/r_Sprites/r_Sprites.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

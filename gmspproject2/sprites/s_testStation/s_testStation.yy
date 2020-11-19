@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dac2c94a-2c21-4241-986c-29412aaaa480","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Test",
+    "path": "folders/Sprites/Test.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_testStation",

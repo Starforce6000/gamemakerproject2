@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_mediumShip6",
-    "path": "sprites/s_mediumShip6/s_mediumShip6.yy",
+    "name": "s_mediumShip3",
+    "path": "sprites/s_mediumShip3/s_mediumShip3.yy",
   },
   "solid": false,
   "visible": true,

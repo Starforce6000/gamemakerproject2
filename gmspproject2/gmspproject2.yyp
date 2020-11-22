@@ -7,6 +7,7 @@
     {"id":{"name":"s_Viper","path":"sprites/s_Viper/s_Viper.yy",},"order":10,},
     {"id":{"name":"s_Vulture","path":"sprites/s_Vulture/s_Vulture.yy",},"order":7,},
     {"id":{"name":"o_pirate","path":"objects/o_pirate/o_pirate.yy",},"order":0,},
+    {"id":{"name":"o_BountyNPC","path":"objects/o_BountyNPC/o_BountyNPC.yy",},"order":9,},
     {"id":{"name":"o_divider","path":"objects/o_divider/o_divider.yy",},"order":4,},
     {"id":{"name":"r_Polaris","path":"rooms/r_Polaris/r_Polaris.yy",},"order":19,},
     {"id":{"name":"s_menuBar","path":"sprites/s_menuBar/s_menuBar.yy",},"order":2,},

@@ -40,8 +40,8 @@ thrusterSprites =
 [s_testThrust, s_testManeuver,
 s_testThrust, s_testThrust]
 thrusterStats =
-[4, 90,
-7, 140]
+[4, 60,
+7, 90]
 thrusterCost =
 [5000, 4500,
 15000, 14000]

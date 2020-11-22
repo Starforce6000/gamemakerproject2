@@ -44,6 +44,11 @@ missionLocations = [-1]
 missionTargets = [-1]
 missionQuantity = [-1]
 missionRewards = [-1]
+npcs = [-1]
+npcAmt = 0
+npcThruster = -1
+npcManeuver = -1
+npcShip = -1
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]

@@ -25,13 +25,13 @@ if(o_gameManager.menu == "") {
 	
 	//Draw jump progress bar
 	if(jumping) {
-		//draw_rectangle(x - 70, y + 40, x + 70, y + 50, false)
-		draw_rectangle(x - 70, y + 40, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 50, false)
+		draw_rectangle(x - 71, y + 39, x + 71, y + 51, false)
+		draw_rectangle_color(x - 70, y + 40, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 50, c_aqua, c_aqua, c_aqua, c_aqua, false)
 	}
 }
 
 
-//JUST FOR TESTING
+//]JUST FOR TESTING
 /*
 pos = 100
 draw_text(100,pos,"WEAPONS EQUIPPED:")

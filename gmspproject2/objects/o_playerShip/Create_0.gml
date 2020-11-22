@@ -19,3 +19,5 @@ pauseSpeed = 0
 
 systemJumpTimer = -1
 jumping = false
+
+target = -1

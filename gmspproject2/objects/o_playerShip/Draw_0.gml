@@ -28,6 +28,14 @@ if(o_gameManager.menu == "") {
 		draw_rectangle(x - 71, y + 39, x + 71, y + 51, false)
 		draw_rectangle_color(x - 70, y + 40, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 50, c_aqua, c_aqua, c_aqua, c_aqua, false)
 	}
+	
+	//Draw arrow towards hostile ships
+	for(i = 0; i < o_gameManager.npcAmt; i++) {
+		if(o_gameManager.npcs[i].hostile == true) {
+			enemyDirection = point_direction(x,y,o_gameManager.npcs[i].x,o_gameManager.npcs[i].y)
+			draw_sprite_ext(s_direction, 0, x, y, 2, 2, enemyDirection, c_white, 1)
+		}
+	}
 }
 
 

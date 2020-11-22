@@ -25,7 +25,7 @@ if((selected != -1) && (inRange == true)) {
 			npcShip = missionTargets[i]
 			npcThruster = 0
 			npcManeuver = 1
-			npcs[npcAmt] = instance_create_layer(player.x,player.y,"Ships",o_BountyNPC)
+			npcs[npcAmt] = instance_create_layer(irandom_range(1000,4000),irandom_range(1000,4000),"Ships",o_BountyNPC)
 			npcAmt++
 		}
 	}

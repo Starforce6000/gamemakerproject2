@@ -13,7 +13,7 @@ outfitSpace =
 engineSpace =
 [70, 200, 300, 100, 150, 60, 60, 400, 150, 100, 70, 80, 120, 70]
 turretPorts =
-[2, 2, 6, 4, 2, 2, 1, 6, 4, 2, 4, 0, 0, 2]
+[1, 2, 6, 4, 2, 1, 1, 6, 4, 2, 4, 0, 0, 1]
 gunPorts = 
 [2, 4, 4, 2, 0, 2 , 0, 6, 0, 4, 0, 4, 4, 2]
 speedModifier =
@@ -53,6 +53,9 @@ weaponNames =
 weaponType = 
 ["gun", "turret",
 "gun", "turret"]
+weaponSprite = 
+[0, s_tripleBlaster,
+0, s_laserEmitter]
 weaponSpaceUse = 
 [6, 22,
 8, 18]
@@ -66,8 +69,8 @@ weaponEnergyUse =
 [10, 10,
 12, 12]
 rate = 
-[5, 5/3,
-7, 7/2]
+[10, 10/3,
+14, 14/2]
 weaponCost =
 [1000, 3500,
 2000, 5500]
@@ -93,3 +96,7 @@ cargoCapacity =
 outfitCost =
 [750, 1500, 3500,
 500, 7500, 35000]
+
+//TURRET LOCATIONS
+turretLocationsX = [-5]
+turretLocationsY = [-8]

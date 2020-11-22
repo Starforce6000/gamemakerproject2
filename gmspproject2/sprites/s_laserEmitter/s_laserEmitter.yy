@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -24,9 +24,9 @@
   "gridX": 2,
   "gridY": 2,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e86dc7e3-d0b7-46de-84ab-581ba478a26c","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e86dc7e3-d0b7-46de-84ab-581ba478a26c","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"LayerId":{"name":"3c010aeb-308f-4d55-a0f4-b3361fe12330","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_laserEmitter","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"resourceVersion":"1.0","name":"e86dc7e3-d0b7-46de-84ab-581ba478a26c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9e93b2ec-c9aa-4af5-a951-57ddaa6b0ab8","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9e93b2ec-c9aa-4af5-a951-57ddaa6b0ab8","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"LayerId":{"name":"3c010aeb-308f-4d55-a0f4-b3361fe12330","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_laserEmitter","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"resourceVersion":"1.0","name":"9e93b2ec-c9aa-4af5-a951-57ddaa6b0ab8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_laserEmitter","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"102c2980-9cce-43cd-8e21-7883d61045a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e86dc7e3-d0b7-46de-84ab-581ba478a26c","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"50dc24f4-f62f-4463-bb5e-27935b22f7c4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e93b2ec-c9aa-4af5-a951-57ddaa6b0ab8","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 32,
-    "yorigin": 32,
+    "xorigin": 21,
+    "yorigin": 33,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_laserEmitter","path":"sprites/s_laserEmitter/s_laserEmitter.yy",},

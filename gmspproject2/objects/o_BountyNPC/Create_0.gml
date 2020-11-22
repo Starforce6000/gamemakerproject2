@@ -16,3 +16,5 @@ turrets = [-1]
 
 thrust = false
 pauseSpeed = 0
+
+hostile = true

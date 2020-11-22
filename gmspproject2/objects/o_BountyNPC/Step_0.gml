@@ -7,4 +7,9 @@ if(abs(angle) <= 70) {
 	if(speed > (acceleration * mass) + (acceleration * 0.5)) {
 		speed = (acceleration * mass) + (acceleration * 0.5)
 	}
+} else if(speed < ((acceleration * mass) + (acceleration * 0.5)) / 2) {
+	motion_add(image_angle, (acceleration * mass) / (2 * room_speed))
+	if(speed > (acceleration * mass) + (acceleration * 0.5)) {
+		speed = (acceleration * mass) + (acceleration * 0.5)
+	}
 }

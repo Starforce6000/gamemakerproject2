@@ -27,6 +27,8 @@
     {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":74,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":12,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":78,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

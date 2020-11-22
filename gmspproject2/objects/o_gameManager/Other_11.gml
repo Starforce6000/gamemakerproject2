@@ -16,3 +16,5 @@ for(i = 0; i < turretsEquipped; i++) {
 
 player.x = dockStation.x
 player.y = dockStation.y
+player.image_xscale = 0.7
+player.image_yscale = 0.7

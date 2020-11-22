@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_largeShip2",
-    "path": "sprites/s_largeShip2/s_largeShip2.yy",
+    "name": "s_Cruiser",
+    "path": "sprites/s_Cruiser/s_Cruiser.yy",
   },
   "solid": false,
   "visible": true,

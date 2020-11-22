@@ -1,4 +1,4 @@
-/// @description OUTFIT PURCHASE
+/// @description ITEM PURCHASE
 if(purchaseID != -1) {
 	remainingOutfitSpace = o_shipManager.outfitSpace[playerShipID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[playerThrusterID]
@@ -58,6 +58,17 @@ if(purchaseID != -1) {
 					playerModules[modulesEquipped] = purchaseID
 					modulesEquipped++
 				}
+			}
+			break
+		case "Commodity":
+			amount = 1
+			if(keyboard_check(vk_shift)) {
+				amount = 10
+			}
+			if((cargoRemaining >= amount) && (playerCredits >= cargoMainPrice[purchaseID] * amount)) {
+				cargoRemaining -= amount
+				inCargo[purchaseID] += amount
+				playerCredits -= cargoMainPrice[purchaseID] * amount
 			}
 			break
 	}

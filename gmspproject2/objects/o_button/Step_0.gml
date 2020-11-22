@@ -12,8 +12,14 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 			}
 			break
 		case "Commodities":
+			with (o_gameManager) {
+				event_perform(ev_other, ev_user10)	
+			}
 			break
 		case "Job Board":
+			with (o_gameManager) {
+				event_perform(ev_other, ev_user11)	
+			}
 			break
 		case "Outfitting":
 			with (o_gameManager) {
@@ -33,10 +39,25 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 			}
 			break
 		case "Selector":
-			o_gameManager.purchaseType = purchaseType
-			o_gameManager.purchaseID = itemID
-			o_gameManager.selected = buttonID
-			o_gameManager.purchaseName = item
+			if(purchaseType != "Commodity" && purchaseType != "") {
+				o_gameManager.purchaseType = purchaseType
+				o_gameManager.purchaseID = itemID
+				o_gameManager.selected = buttonID
+				o_gameManager.purchaseName = item
+			} else if(purchaseType == "Commodity") {
+				o_gameManager.selected = buttonID
+				o_gameManager.purchaseName = o_gameManager.cargoNames[buttonID]
+				o_gameManager.purchaseID = buttonID
+				o_gameManager.purchaseType = purchaseType
+
+			} else {
+				o_gameManager.missionType = missionType
+				o_gameManager.selected = buttonID
+				o_gameManager.missionDest = location
+				o_gameManager.missionSize = missionSize
+				o_gameManager.missionAmount = cargoAmount
+				o_gameManager.missionPay = pay
+			}
 			break
 		case "Purchase":
 			if(o_gameManager.purchaseType == "Ship") {
@@ -50,7 +71,12 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 			}
 			
 			break
+		case "Sell":
+			break
 		case "Accept":
+			with (o_gameManager) {
+				event_perform(ev_other, ev_user9)	
+			}
 			break
 	}
 }

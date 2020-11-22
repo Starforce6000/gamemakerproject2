@@ -1,13 +1,13 @@
 {
   "spriteId": {
-    "name": "s_testStation",
-    "path": "sprites/s_testStation/s_testStation.yy",
+    "name": "s_Station",
+    "path": "sprites/s_Station/s_Station.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "s_testStation",
-    "path": "sprites/s_testStation/s_testStation.yy",
+    "name": "s_Station",
+    "path": "sprites/s_Station/s_Station.yy",
   },
   "persistent": false,
   "parentObjectId": null,

@@ -1,21 +1,25 @@
 //SHIP INFO
-ships = 3
+ships = 14
 shipNames = 
-["Finch", "Vulture", "Falcon"]
+["Finch", "Vulture", "Falcon", "Anaconda", "Argosy", "Cobra", "Courier", "Cruiser", "Galleon", "Gunboat", "Orbis", "Rapid", "Thunderbolt", "Viper"]
 shipSprites =
-[s_testShip, s_testMediumShip, s_testLargeShip]
+[s_Finch, s_Vulture, s_Falcon, s_Anaconda, s_Argosy, s_Cobra, s_Courier, s_Cruiser, s_Galleon, s_Gunboat, s_Orbis, s_Rapid, s_Thunderbolt, s_Viper]
 shipSize =
-["small", "medium", "large"]
+["small", "medium", "large", "medium", "medium", "small", "small", "large", "medium", "small", "medium", "small", "small", "small"]
 shipCost = 
-[20000, 150000, 2500000]
+[20000, 150000, 2500000, 135000, 140000, 25000, 20000, 8000000, 150000, 35000, 120000, 40000, 30000, 25000]
 outfitSpace =
-[150, 300, 700]
+[120, 300, 700, 350, 350, 180, 200, 900, 400, 200, 320, 150, 120, 150]
+engineSpace =
+[70, 200, 300, 100, 150, 60, 60, 400, 150, 100, 70, 80, 120, 70]
 turretPorts =
-[2, 2, 6]
+[2, 2, 6, 4, 2, 2, 1, 6, 4, 2, 4, 0, 0, 2]
 gunPorts = 
-[2, 4, 4]
+[2, 4, 4, 2, 0, 2 , 0, 6, 0, 4, 0, 4, 4, 2]
 speedModifier =
-[1, 0.3, 0.1]
+[1, 0.3, 0.1, 0.25, 0.25, 0.9, 0.9, 0.15, 0.3, 1, 0.25, 1, 1, 1]
+baseHP =
+[1000, 6000, 14000, 7000, 5000, 1500, 1000, 16000, 7000, 1500, 6000, 1000, 800, 1500]
 
 //OUTFIT INFO
 thrusterOutfits = 4
@@ -43,7 +47,6 @@ thrusterCost =
 15000, 14000]
 
 //Weapons
-//For beam weapons, rate should be 0 and all values are per second instead of per shot.
 weaponNames =
 ["Energy Blaster", "Triple Blaster Turret",
 "Laser Emitter", "Dual Laser Turret"]
@@ -52,19 +55,19 @@ weaponType =
 "gun", "turret"]
 weaponSpaceUse = 
 [6, 22,
-8, 20]
+8, 18]
 damageShields = 
 [12, 12,
-80, 160]
+8, 8]
 damageHull =
 [6, 6,
-100, 200]
+13, 13]
 weaponEnergyUse =
 [10, 10,
-150, 300]
+12, 12]
 rate = 
 [5, 5/3,
-0, 0]
+7, 7/2]
 weaponCost =
 [1000, 3500,
 2000, 5500]
@@ -77,7 +80,7 @@ miscNames =
 "Cargo Rack", "Cargo Bay", "Cargo Hangar"]
 spaceUse =
 [5, 6, 15,
-10, 75, 300]
+10, 75, 400]
 energyGeneration =
 [0, -50, 0,
 0, 0, 0]
@@ -86,7 +89,7 @@ heatGeneration =
 0, 0, 0]
 cargoCapacity =
 [0, 0, 0,
-10, 150, 600]
+10, 100, 600]
 outfitCost =
 [750, 1500, 3500,
 500, 7500, 35000]

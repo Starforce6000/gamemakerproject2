@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_mediumShip4",
-    "path": "sprites/s_mediumShip4/s_mediumShip4.yy",
+    "name": "s_Argosy",
+    "path": "sprites/s_Argosy/s_Argosy.yy",
   },
   "solid": false,
   "visible": true,

@@ -3,7 +3,7 @@ if(button != "Selector") {
 	image_yscale = 3
 } else {
 	sprite_index = s_outfitButton
-	image_xscale = 8.5
+	image_xscale = 9
 	image_yscale = 1.25
 	if(o_gameManager.selected == buttonID) { 
 		image_index = 1
@@ -42,7 +42,7 @@ if(button == "Purchase") {
 		pos -= 30
 	} else if(o_gameManager.purchaseType == "Ship") {
 		draw_text(x-450, y-pos, "SHIP INFO")
-	} else if(o_gameManager.purchaseID != -1 ) {
+	} else if(o_gameManager.purchaseType == "Misc") {
 		cost = "Cost: " + string(o_shipManager.outfitCost[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, cost)
 		pos -= 30
@@ -89,12 +89,34 @@ if(button == "Purchase") {
 	for(i = 0; i < o_gameManager.modulesEquipped; i++) {
 		remainingOutfitSpace -= o_shipManager.spaceUse[o_gameManager.playerModules[i]]
 	}
-	remainingOutfits = "Remaning Outfit Space: " + string(remainingOutfitSpace)
-	draw_text(x-450, y-pos, remainingOutfits)
+	
+	if(o_gameManager.menu == "Outfits") {
+		remainingOutfits = "Remaning Outfit Space: " + string(remainingOutfitSpace)
+		draw_text(x-450, y-pos, remainingOutfits)
+	} else if(o_gameManager.menu == "Commodities") {
+		remainingCargo = "Remaing Cargo Space: " + string(o_gameManager.cargoRemaining)	
+		draw_text(x-450, y-pos, remainingCargo)
+	}
 }
 
 if(button != "Selector") {
 	draw_text_transformed(x - 100, y - 20, button, 2, 2, 0)
-} else {
-	draw_text_transformed(x - 225, y - 15, item, 1, 1.25, 0)
+} else if(purchaseType != "") {
+	if(purchaseType != "Commodity") {
+		draw_text_transformed(x - 225, y - 15, item, 1, 1.25, 0)
+	} else {
+		commodityText = o_gameManager.cargoNames[buttonID] + " - " + string(o_gameManager.cargoMainPrice[buttonID]) + " Credits"    
+		commodityText2 = "In Cargo: " + string(o_gameManager.inCargo[buttonID])
+		draw_text_transformed(x - 225, y - 15, commodityText, 1, 1.25, 0)
+		draw_text_transformed(x + 100, y - 15, commodityText2, 1, 1.25, 0)
+	}
+} else if(missionType != "") {
+	if(missionType == "bounty") {
+		missionString = "Destroy " + missionSize + " pirate at " + o_gameManager.systemName[location]
+	} else {
+		missionString = "Deliver " + string(cargoAmount) + " tons of cargo to " + o_gameManager.systemName[location]
+	}
+	missionString2 = string(pay) + " Credits"
+	draw_text_transformed(x - 225, y - 15, missionString, 1, 1.25, 0)
+	draw_text_transformed(x + 150, y - 15, missionString2, 1, 1.25, 0)
 }

@@ -9,6 +9,8 @@ menuButton[0] = instance_create_layer(1150, 700, "UI", o_button)
 menuButton[0].button = "Exit"
 menuButton[1] = instance_create_layer(1150, 600, "UI", o_button)
 menuButton[1].button = "Purchase"
+menuButton[2] = instance_create_layer(800, 700, "UI", o_button)
+menuButton[2].button = "Sell"
 
 pos = 50
 buttonCount = 0

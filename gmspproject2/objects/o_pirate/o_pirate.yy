@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_mediumShip3",
-    "path": "sprites/s_mediumShip3/s_mediumShip3.yy",
+    "name": "s_Orbis",
+    "path": "sprites/s_Orbis/s_Orbis.yy",
   },
   "solid": false,
   "visible": true,

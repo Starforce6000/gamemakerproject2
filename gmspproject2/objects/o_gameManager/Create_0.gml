@@ -4,7 +4,7 @@ playerThrusterID = 0
 playerManeuverID = 1
 playerGunports = [-1]
 playerTurretports = [-1]
-playerCredits = 99999999999
+playerCredits = 10000000
 modulesEquipped = 0
 gunsEquipped = 0
 turretsEquipped = 0
@@ -29,10 +29,27 @@ dispX = 0
 dispY = 0
 mapStars = [0]
 inRange = true
+missionType = ""
+missionSize = ""
+missionDest = 0
+missionPay = 0
+missionAmount = 0
+cargo = 0
+cargoRemaining = 0
+inCargo = [0, 0, 0, 0, 0, 0, 0, 0]
+missionCargo = 0
+missions = 0
+missionTypes = [""]
+missionLocations = [-1]
+missionTargets = [-1]
+missionQuantity = [-1]
+missionRewards = [-1]
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 systemCount = 7 + 14 + 0
+cargoNames = ["Food", "Hydrogen", "Metals", "Electronics", "Luxury Goods", "Clothing", "Medical", "Water"]
+cargoMainPrice = [40, 30, 60, 100, 250, 70, 150, 60]
 //SYSTEMS [IMPORTANT]
 systemName = ["Sol", "Alpha Centauri", "Sirius", "Procyon", "Epsilon", "Ceti", "Denebola", //Core Systems
 "Asgard", "Twinstar", "Betelguese", "Deneb", "Rutilicus", "Alpha", "Syndica", "Tazared", "Pollux", "Castor", "Arida", "Eradani", "Polaris", "Alinyat", //Belt Systems

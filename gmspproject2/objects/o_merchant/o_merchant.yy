@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_mediumShip5",
-    "path": "sprites/s_mediumShip5/s_mediumShip5.yy",
+    "name": "s_Galleon",
+    "path": "sprites/s_Galleon/s_Galleon.yy",
   },
   "solid": false,
   "visible": true,

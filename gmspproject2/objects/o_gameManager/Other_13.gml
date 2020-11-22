@@ -7,6 +7,7 @@ for(i = 0; i < 3; i++) {
 }
 instance_destroy(menuButton[0])
 instance_destroy(menuButton[1])
+instance_destroy(menuButton[2])
 
 menu = "station"
 

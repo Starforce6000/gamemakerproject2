@@ -18,3 +18,6 @@ thrust = false
 pauseSpeed = 0
 
 hostile = true
+
+image_xscale = 0.7
+image_yscale = 0.7

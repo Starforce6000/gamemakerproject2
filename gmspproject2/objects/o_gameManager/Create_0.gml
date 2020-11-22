@@ -49,6 +49,8 @@ npcAmt = 0
 npcThruster = -1
 npcManeuver = -1
 npcShip = -1
+spawnedTurrets = [-1]
+turretAmt = 0
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]

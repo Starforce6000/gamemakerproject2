@@ -40,8 +40,35 @@ if(button == "Purchase") {
 		space = "Outfit Space: " + string(o_shipManager.weaponSpaceUse[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, space)
 		pos -= 30
+		weaponType = "Weapon Type: " + string(o_shipManager.weaponType[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, weaponType)
+		pos -= 30
+		shieldDmg = "Damage Per Shot (Shields): " + string(o_shipManager.damageShields[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, shieldDmg)
+		pos -= 30
+		hullDmg = "Damage Per Shot (Hull): " + string(o_shipManager.damageHull[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, hullDmg)
+		pos -= 30
+		perSecond = "Shots Per Second: " + string(room_speed / o_shipManager.rate[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, perSecond)
+		pos -= 30
 	} else if(o_gameManager.purchaseType == "Ship") {
-		draw_text(x-450, y-pos, "SHIP INFO")
+		cost = "Cost: " + string(o_shipManager.shipCost[o_gameManager.purchaseID])
+		shipOutfit = "Ship Outfit Space: " + string(o_shipManager.outfitSpace[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, cost)
+		pos -= 30
+		shipOutfit = "Ship Outfit Space: " + string(o_shipManager.outfitSpace[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, shipOutfit)
+		pos -= 30
+		guns = "Gun Ports: " + string(o_shipManager.gunPorts[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, guns)
+		pos -= 30
+		turrets = "Turret Ports: " + string(o_shipManager.turretPorts[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, turrets)
+		pos -= 30
+		baseHull = "Base Hull Strength: " + string(o_shipManager.baseHP[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, baseHull)
+		pos -= 30
 	} else if(o_gameManager.purchaseType == "Misc") {
 		cost = "Cost: " + string(o_shipManager.outfitCost[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, cost)
@@ -73,7 +100,7 @@ if(button == "Purchase") {
 			pos -= 30
 		}
 	}
-	pos = 130
+	pos = 270
 	credits = "Your Credits: " + string(o_gameManager.playerCredits)
 	draw_text(x-450, y-pos, credits)
 	pos -= 30

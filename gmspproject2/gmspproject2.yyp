@@ -9,7 +9,7 @@
     {"id":{"name":"s_Vulture","path":"sprites/s_Vulture/s_Vulture.yy",},"order":7,},
     {"id":{"name":"o_pirate","path":"objects/o_pirate/o_pirate.yy",},"order":0,},
     {"id":{"name":"s_smallBlueStar","path":"sprites/s_smallBlueStar/s_smallBlueStar.yy",},"order":2,},
-    {"id":{"name":"o_BountyNPC","path":"objects/o_BountyNPC/o_BountyNPC.yy",},"order":9,},
+    {"id":{"name":"o_bountyNPC","path":"objects/o_bountyNPC/o_bountyNPC.yy",},"order":9,},
     {"id":{"name":"s_metals","path":"sprites/s_metals/s_metals.yy",},"order":2,},
     {"id":{"name":"o_divider","path":"objects/o_divider/o_divider.yy",},"order":4,},
     {"id":{"name":"r_Polaris","path":"rooms/r_Polaris/r_Polaris.yy",},"order":19,},

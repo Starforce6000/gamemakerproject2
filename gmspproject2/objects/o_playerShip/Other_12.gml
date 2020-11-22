@@ -2,7 +2,7 @@
 num = 0
 found = false
 for(i = 0; i < o_shipManager.ships; i++) {
-	if(shipID < i && !found) {
+	if((shipID > i) && !found) {
 		num += o_shipManager.turretPorts[i]
 	} else {
 		found = true	
@@ -19,4 +19,6 @@ for(i = 0; i < o_gameManager.turretsEquipped; i++) {
 	with(turrets[i]) {
 		event_perform(ev_other, ev_user0)	
 	}
+	o_gameManager.spawnedTurrets[i] = turrets[i]
+	o_gameManager.turretAmt++
 }

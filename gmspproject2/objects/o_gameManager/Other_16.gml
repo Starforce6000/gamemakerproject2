@@ -21,3 +21,11 @@ menuButton[5] = instance_create_layer(1150, 700, "UI", o_button)
 menuButton[5].button = "Shipyard"
 
 instance_destroy(player)
+for(i = 0; i < npcAmt; i++) {
+	instance_destroy(npcs[i])	
+}
+for(i = 0; i < turretAmt; i++) {
+	instance_destroy(spawnedTurrets[i])	
+}
+npcAmt = 0
+turretAmt = 0

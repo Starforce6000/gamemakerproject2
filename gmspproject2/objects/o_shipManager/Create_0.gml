@@ -24,7 +24,7 @@ baseHP =
 //OUTFIT INFO
 thrusterOutfits = 4
 weaponOutfits = 4
-miscOutfits = 6
+miscOutfits = 12
 
 //Thrusters
 thrusterNames = 
@@ -65,6 +65,15 @@ damageShields =
 damageHull =
 [6, 6,
 13, 13]
+lifetime = 
+[1.5, 1.5,
+1.5, 1.5]
+projectileSpeed =
+[12, 12,
+19, 19]
+projectileSprites =
+[s_projectileBlaster, s_projectileBlaster,
+s_projectileLaser, s_projectileLaser]
 weaponEnergyUse =
 [10, 10,
 12, 12]
@@ -80,23 +89,61 @@ weaponCost =
 //If an outfit doesn't use a certain property, set that to 0 for its value.
 miscNames = 
 ["Heatsink", "Electric Heatsink", "Liquid Nitrogen Cooler",
-"Cargo Rack", "Cargo Bay", "Cargo Hangar"]
+"Cargo Rack", "Cargo Bay", "Cargo Hangar",
+"Small Reactor", "Medium Reactor", "Large Reactor",
+"Small Battery", "Medium Battery", "Large Battery"]
 spaceUse =
 [5, 6, 15,
-10, 75, 400]
+10, 75, 400,
+10, 50, 80,
+5, 25, 40]
 energyGeneration =
 [0, -50, 0,
+0, 0, 0,
+200, 1200, 3000,
 0, 0, 0]
+energyStorage =
+[0, 0, 0,
+0, 0, 0,
+0, 0, 0,
+100, 500, 1500]
 heatGeneration = 
 [-200, -350, -750,
+0, 0, 0,
+200, 600, 2000,
+0, 0, 0]
+shieldGeneration =
+[0, 0, 0,
+0, 0, 0,
+0, 0, 0,
 0, 0, 0]
 cargoCapacity =
 [0, 0, 0,
-10, 100, 600]
+10, 100, 600,
+0, 0, 0,
+0, 0, 0]
 outfitCost =
 [750, 1500, 3500,
-500, 7500, 35000]
+500, 7500, 35000,
+1000, 10000, 50000,
+500, 5000, 25000]
 
 //TURRET LOCATIONS
-turretLocationsX = [-5]
-turretLocationsY = [-8]
+turretLocationsX = 
+[-5,
+-25,-25,
+-45,-45,20,20,-10,-10,
+-20,-20, 30, 30,
+-30, 15,
+-10,
+-10,
+-30,-30,35,35,10,10]
+turretLocationsY = 
+[-8,
+-20,20,
+-40,40,-15,15,-25,25,
+-25, 25, -20, 20,
+0,0,
+0,
+0,
+-15,15,-25,25,-35,35]

@@ -15,36 +15,38 @@ engineSpace =
 turretPorts =
 [1, 2, 6, 4, 2, 1, 1, 6, 4, 2, 4, 0, 0, 1]
 gunPorts = 
-[2, 4, 4, 2, 0, 2 , 0, 6, 0, 4, 0, 4, 4, 2]
+[2, 4, 4, 2, 0, 2 , 0, 6, 0, 4, 0, 4, 2, 2]
 speedModifier =
-[1, 0.3, 0.1, 0.25, 0.25, 0.9, 0.9, 0.15, 0.3, 1, 0.25, 1, 1, 1]
+[1, 0.4, 0.1, 0.35, 0.35, 0.9, 0.9, 0.15, 0.35, 1, 0.4, 1, 1, 1]
 baseHP =
 [1000, 6000, 14000, 7000, 5000, 1500, 1000, 16000, 7000, 1500, 6000, 1000, 800, 1500]
 
 //OUTFIT INFO
-thrusterOutfits = 4
+thrusterOutfits = 6
 weaponOutfits = 4
-miscOutfits = 12
+miscOutfits = 15
 
 //Thrusters
 thrusterNames = 
 ["x150 Small Ion Thruster", "k150 Small Ion RCS",
-"x250 Medium Ion Thruster", "k250 Medium Ion RCS"]
+"x250 Medium Ion Thruster", "k250 Medium Ion RCS",
+"x600 Large Ion Thruster", "k600 Large Ion RCS"]
 thrusterType =
 ["main", "maneuvering",
+"main", "maneuvering",
 "main", "maneuvering"]
 thrusterSpaceUse =
 [30, 20,
-65, 50]
-thrusterSprites = 
-[s_testThrust, s_testManeuver,
-s_testThrust, s_testThrust]
+65, 50,
+120, 100] 
 thrusterStats =
 [4, 60,
-7, 90]
+7, 90,
+11,140]
 thrusterCost =
 [5000, 4500,
-15000, 14000]
+15000, 14000,
+100000, 85000]
 
 //Weapons
 weaponNames =
@@ -91,42 +93,74 @@ miscNames =
 ["Heatsink", "Electric Heatsink", "Liquid Nitrogen Cooler",
 "Cargo Rack", "Cargo Bay", "Cargo Hangar",
 "Small Reactor", "Medium Reactor", "Large Reactor",
-"Small Battery", "Medium Battery", "Large Battery"]
+"Small Battery", "Medium Battery", "Large Battery",
+"SH-20 Shielding", "SH-40 Shielding", "SH-120 Shielding"]
 spaceUse =
 [5, 6, 15,
 10, 75, 400,
 10, 50, 80,
-5, 25, 40]
+5, 25, 40,
+20,40,120]
 energyGeneration =
 [0, -50, 0,
 0, 0, 0,
 200, 1200, 3000,
-0, 0, 0]
+0, 0, 0,
+-200,-380,-1000]
 energyStorage =
 [0, 0, 0,
 0, 0, 0,
 0, 0, 0,
-100, 500, 1500]
+100, 500, 1500,
+0,0,0]
 heatGeneration = 
 [-200, -350, -750,
 0, 0, 0,
 200, 600, 2000,
-0, 0, 0]
+0, 0, 0,
+0,0,0]
 shieldGeneration =
 [0, 0, 0,
 0, 0, 0,
 0, 0, 0,
-0, 0, 0]
+0, 0, 0,
+250,500,1500]
 cargoCapacity =
 [0, 0, 0,
 10, 100, 600,
 0, 0, 0,
-0, 0, 0]
+0, 0, 0,
+0,0,0]
 outfitCost =
 [750, 1500, 3500,
 500, 7500, 35000,
 1000, 10000, 50000,
-500, 5000, 25000]
+500, 5000, 25000,
+2500, 12500, 50000]
+
+//GUN LOCATIONS
+gunLocationsX =
+[20,20,
+35,35,40,40,
+-20,-20,70,70,
+40,40,
+30,30,
+50,50,60,60,70,70,
+0,0,20,20,
+-10,-10, 25, 25,
+20,20,
+25,25]
+gunLocationsY =
+[-5,5,
+-10,10,-7,7,
+-50,50,-10,10,
+-15,15,
+-12,12,
+-20,20,-12,12,-5,5,
+-20,20,-10,10,
+-30,30,-5,5,
+-5,5,
+-10,10]
 
 //TURRET LOCATIONS
 turretLocationsX = 
@@ -137,7 +171,11 @@ turretLocationsX =
 -30, 15,
 -10,
 -10,
--30,-30,35,35,10,10]
+-30,-30,35,35,10,10,
+-20, -20, 20, 20,
+-5,-5,
+-5,-5,10,10,
+-5]
 turretLocationsY = 
 [-8,
 -20,20,
@@ -146,4 +184,8 @@ turretLocationsY =
 0,0,
 0,
 0,
--15,15,-25,25,-35,35]
+-15,15,-25,25,-35,35,
+-15,15,-15,15,
+-10,10,
+-30,30,-15,15,
+0]

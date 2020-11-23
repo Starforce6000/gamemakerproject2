@@ -25,16 +25,11 @@ if(o_gameManager.menu == "") {
 	
 	//Draw jump progress bar
 	if(jumping) {
-		draw_rectangle(x - 71, y + 39, x + 71, y + 51, false)
-		draw_rectangle_color(x - 70, y + 40, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 50, c_aqua, c_aqua, c_aqua, c_aqua, false)
-		draw_rectangle_color(x - 70, y + 40, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 50, c_black, c_black, c_black, c_black, true)
+		draw_rectangle_color(x - 70, y + 70, x + (140 * systemJumpTimer / (3 * room_speed)) - 70, y + 80, c_lime, c_lime, c_lime, c_lime, false)
 	}
 	
-	//Draw arrow towards hostile ships
-	for(i = 0; i < o_gameManager.npcAmt; i++) {
-		if(o_gameManager.npcs[i].hostile == true) {
-			enemyDirection = point_direction(x,y,o_gameManager.npcs[i].x,o_gameManager.npcs[i].y)
-			draw_sprite_ext(s_direction, 0, x, y, 3, 3, enemyDirection, c_white, 1)
-		}
-	}
+	//Draw Shield Bar
+	draw_rectangle_color(x - 70, y + 40, x + (140 * shieldHP / (maxShieldHP)) - 70, y + 50, c_blue, c_blue, c_blue, c_blue, false)
+	//Draw Health Bar
+	draw_rectangle_color(x - 70, y + 50, x + (140 * hullHP / (maxHullHP)) - 70, y + 60, c_orange, c_orange, c_orange, c_orange, false)
 }

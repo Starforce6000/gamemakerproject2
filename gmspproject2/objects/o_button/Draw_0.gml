@@ -60,6 +60,9 @@ if(button == "Purchase") {
 		shipOutfit = "Ship Outfit Space: " + string(o_shipManager.outfitSpace[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, shipOutfit)
 		pos -= 30
+		shipEngine = "Engine Space: " + string(o_shipManager.engineSpace[o_gameManager.purchaseID])
+		draw_text(x-450, y-pos, shipEngine)
+		pos -= 30
 		guns = "Gun Ports: " + string(o_shipManager.gunPorts[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, guns)
 		pos -= 30

@@ -1,0 +1,1 @@
+prevDay = o_gameManager.day

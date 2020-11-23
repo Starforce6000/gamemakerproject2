@@ -6,6 +6,11 @@ if(menu == "map") {
 	with(o_playerShip) {
 		event_perform(ev_other, ev_user1)
 	}
+	for(i = 0; i < npcAmt; i++) {
+		with(npcs[i]) {
+			event_perform(ev_other, ev_user1)	
+		}
+	}
 } else if(menu == "") {
 	if(player.jumping == false) {
 		menu = "map"
@@ -22,6 +27,11 @@ if(menu == "map") {
 		}
 		with(o_playerShip) {
 			event_perform(ev_other, ev_user0)
+		}
+		for(i = 0; i < npcAmt; i++) {
+			with(npcs[i]) {
+				event_perform(ev_other, ev_user0)	
+			}
 		}
 	}
 }

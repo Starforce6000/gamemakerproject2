@@ -13,7 +13,11 @@ for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
 	turrets[i].ship = id
 	turrets[i].dispX = o_shipManager.turretLocationsX[i+num]
 	turrets[i].dispY = o_shipManager.turretLocationsY[i+num]
-	chooseTurret = irandom_range(0, 3) //WIll be 7 later
+	if(o_shipManager.shipSize[shipID] == "large") {
+		chooseTurret = irandom_range(0, 7)
+	} else {
+		chooseTurret = irandom_range(0, 3)
+	}
 	if(chooseTurret % 2 == 0) {
 		chooseTurret++	
 	}
@@ -40,7 +44,11 @@ for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
 	guns[i].ship = id
 	guns[i].dispX = o_shipManager.gunLocationsX[i+num]
 	guns[i].dispY = o_shipManager.gunLocationsY[i+num]
-	chooseGun = irandom_range(0, 3) //WIll be 7 later
+	if(o_shipManager.shipSize[shipID] == "large") {
+		chooseGun = irandom_range(0, 7)
+	} else {
+		chooseGun = irandom_range(0, 3)
+	}
 	if(chooseGun % 2 == 1) {
 		chooseGun--
 	}

@@ -1,8 +1,11 @@
 /// @description ITEM PURCHASE
 if(purchaseID != -1) {
 	remainingOutfitSpace = o_shipManager.outfitSpace[playerShipID]
+	remainingEngineSpace = o_shipManager.engineSpace[playerShipID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[playerThrusterID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[playerManeuverID]
+	remainingEngineSpace -= o_shipManager.thrusterSpaceUse[playerThrusterID]
+	remainingEngineSpace -= o_shipManager.thrusterSpaceUse[playerManeuverID]
 	for(i = 0; i < gunsEquipped; i++) {
 		remainingOutfitSpace -= o_shipManager.weaponSpaceUse[playerGunports[i]]
 	}
@@ -16,18 +19,22 @@ if(purchaseID != -1) {
 		case "Thruster":
 			if(o_shipManager.thrusterType[purchaseID] == "main") {
 				if(remainingOutfitSpace + o_shipManager.thrusterSpaceUse[playerThrusterID] >= o_shipManager.thrusterSpaceUse[purchaseID]) {
-					if(playerCredits >= o_shipManager.thrusterCost[purchaseID]) {
-						playerCredits -= o_shipManager.thrusterCost[purchaseID]
-						playerCredits += o_shipManager.thrusterCost[playerThrusterID]
-						playerThrusterID = purchaseID
+					if(remainingEngineSpace + o_shipManager.thrusterSpaceUse[playerThrusterID] >= o_shipManager.thrusterSpaceUse[purchaseID]) {
+						if(playerCredits >= o_shipManager.thrusterCost[purchaseID]) {
+							playerCredits -= o_shipManager.thrusterCost[purchaseID]
+							playerCredits += o_shipManager.thrusterCost[playerThrusterID]
+							playerThrusterID = purchaseID
+						}
 					}
 				}
 			} else {
 				if(remainingOutfitSpace + o_shipManager.thrusterSpaceUse[playerManeuverID] >= o_shipManager.thrusterSpaceUse[purchaseID]) {
-					if(playerCredits >= o_shipManager.thrusterCost[purchaseID]) {
-						playerCredits -= o_shipManager.thrusterCost[purchaseID]
-						playerCredits += o_shipManager.thrusterCost[playerManeuverID]
-						playerManeuverID = purchaseID
+					if(remainingEngineSpace + o_shipManager.thrusterSpaceUse[playerManeuverID] >= o_shipManager.thrusterSpaceUse[purchaseID]) {
+						if(playerCredits >= o_shipManager.thrusterCost[purchaseID]) {
+							playerCredits -= o_shipManager.thrusterCost[purchaseID]
+							playerCredits += o_shipManager.thrusterCost[playerManeuverID]
+							playerManeuverID = purchaseID
+						}
 					}
 				}
 			}
@@ -71,5 +78,11 @@ if(purchaseID != -1) {
 				playerCredits -= cargoMainPrice[purchaseID] * amount
 			}
 			break
+	}
+}
+
+for(i = 0; i < buttonCount; i++) {
+	with(subMenuButton[i]) {
+		event_perform(ev_other, ev_user0)	
 	}
 }

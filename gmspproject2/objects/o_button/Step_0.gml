@@ -34,8 +34,24 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 		case "Skills":
 			break
 		case "Exit":
-			with (o_gameManager) {
-				event_perform(ev_other, ev_user3)	
+			if(o_gameManager.menu == "Outfits") {
+				powerGeneration = 0
+				for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+					powerGeneration += o_shipManager.energyGeneration[o_gameManager.playerModules[i]]
+				}
+				heatGeneration = 0
+				for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+					heatGeneration += o_shipManager.heatGeneration[o_gameManager.playerModules[i]]
+				}
+				if(powerGeneration > 0 and heatGeneration <= 0) {
+					with (o_gameManager) {
+						event_perform(ev_other, ev_user3)	
+					}
+				}
+			} else {
+				with (o_gameManager) {
+					event_perform(ev_other, ev_user3)	
+				}
 			}
 			break
 		case "Selector":
@@ -72,6 +88,11 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 			
 			break
 		case "Sell":
+			if(o_gameManager.purchaseType != "Ship") {
+				with(o_gameManager) {
+					event_perform(ev_other, ev_user13)	
+				}
+			}
 			break
 		case "Accept":
 			with (o_gameManager) {

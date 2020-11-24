@@ -63,3 +63,8 @@ for(i = 0; i < o_shipManager.miscOutfits; i++) {
 }
 purchaseID = -1
 selected = -1
+for(i = 0; i < buttonCount; i++) {
+	with(subMenuButton[i]) {
+		event_perform(ev_other, ev_user0)	
+	}
+}

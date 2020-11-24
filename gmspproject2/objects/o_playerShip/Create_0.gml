@@ -20,6 +20,7 @@ systemJumpTimer = -1
 jumping = false
 aiType = "player"
 target = -1
+alive = true
 
 shieldHP = 0
 shieldChargeRate = 0
@@ -30,7 +31,14 @@ for(i = 0; i < o_gameManager.modulesEquipped; i++) {
 maxShieldHP = shieldHP
 hullHP = o_shipManager.baseHP[shipID]
 maxHullHP = hullHP
-charging = true
 chargeDelay = 0
+
+maxEnergy = 0
+energyGeneration = 0
+for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+	maxEnergy += o_shipManager.energyStorage[o_gameManager.playerModules[i]]
+	energyGeneration += o_shipManager.energyStorage[o_gameManager.playerModules[i]]
+}
+shipEnergy = maxEnergy
 
 invincible = false

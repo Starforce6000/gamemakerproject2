@@ -6,6 +6,7 @@ button = ""
 purchaseType = ""
 item = ""
 itemID = 0
+moduleEquipped = 0
 
 //JOB BOARD
 missionType = ""

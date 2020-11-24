@@ -1,1 +1,3 @@
-playerCredits += 1000000
+if(devMode) {
+	playerCredits += 1000000
+}

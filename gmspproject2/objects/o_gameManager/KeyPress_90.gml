@@ -1,1 +1,3 @@
-event_perform(ev_other,ev_user12)
+if(devMode) {
+	event_perform(ev_other,ev_user12)
+}

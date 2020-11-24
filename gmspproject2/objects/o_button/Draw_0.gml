@@ -33,7 +33,7 @@ if(button == "Purchase") {
 		}
 		pos -= 30
 		draw_text(x-450, y-pos, stats)
-		draw_sprite_ext(o_shipManager.thrusterSprite[o_gameManager.purchaseID],o_shipManager.thrusterSprite[o_gameManager.purchaseID],x-350,y-125,2,2,0,c_white,1)
+		//draw_sprite_ext(o_shipManager.thrusterSprite[o_gameManager.purchaseID],o_shipManager.thrusterSprite[o_gameManager.purchaseID],x-350,y-125,2,2,0,c_white,1)
 	} else if(o_gameManager.purchaseType == "Weapon") {
 		cost = "Cost: " + string(o_shipManager.weaponCost[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, cost)
@@ -53,7 +53,9 @@ if(button == "Purchase") {
 		perSecond = "Shots Per Second: " + string(room_speed / o_shipManager.rate[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, perSecond)
 		pos -= 30
-		draw_sprite_ext(o_shipManager.weaponSprite[o_gameManager.purchaseID],o_shipManager.weaponSprite[o_gameManager.purchaseID],x-350,y-125,2,2,0,c_white,1)
+		if(o_shipManager.weaponType[o_gameManager.purchaseID] == "turret") {
+			draw_sprite_ext(o_shipManager.weaponSprite[o_gameManager.purchaseID],o_shipManager.weaponSprite[o_gameManager.purchaseID],x-25,y-125,2,2,0,c_white,1)
+		}
 	} else if(o_gameManager.purchaseType == "Ship") {
 		cost = "Cost: " + string(o_shipManager.shipCost[o_gameManager.purchaseID])
 		shipOutfit = "Ship Outfit Space: " + string(o_shipManager.outfitSpace[o_gameManager.purchaseID])
@@ -113,6 +115,9 @@ if(button == "Purchase") {
 	remainingOutfitSpace = o_shipManager.outfitSpace[o_gameManager.playerShipID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[o_gameManager.playerThrusterID]
 	remainingOutfitSpace -= o_shipManager.thrusterSpaceUse[o_gameManager.playerManeuverID]
+	remainingEngineSpace = o_shipManager.engineSpace[o_gameManager.playerShipID]
+	remainingEngineSpace -= o_shipManager.thrusterSpaceUse[o_gameManager.playerThrusterID]
+	remainingEngineSpace -= o_shipManager.thrusterSpaceUse[o_gameManager.playerManeuverID]
 	for(i = 0; i < o_gameManager.gunsEquipped; i++) {
 		remainingOutfitSpace -= o_shipManager.weaponSpaceUse[o_gameManager.playerGunports[i]]
 	}
@@ -126,6 +131,38 @@ if(button == "Purchase") {
 	if(o_gameManager.menu == "Outfits") {
 		remainingOutfits = "Remaning Outfit Space: " + string(remainingOutfitSpace)
 		draw_text(x-450, y-pos, remainingOutfits)
+		pos -= 30
+		remainingEngines = "Remaining Engine Space: " + string(remainingEngineSpace)
+		draw_text(x-450, y-pos, remainingEngines)
+		pos -= 30
+		powerGeneration = 0
+		for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+			powerGeneration += o_shipManager.energyGeneration[o_gameManager.playerModules[i]]
+		}
+		draw_text(x-450, y-pos, "Ship Energy Generation: " + string(powerGeneration))
+		pos -= 30
+		heatGeneration = 0
+		for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+			heatGeneration += o_shipManager.heatGeneration[o_gameManager.playerModules[i]]
+		}
+		powerStorage = 0
+		for(i = 0; i < o_gameManager.modulesEquipped; i++) {
+			powerStorage += o_shipManager.energyStorage[o_gameManager.playerModules[i]]
+		}
+		draw_text(x-450, y-pos, "Ship Heat Generation: " + string(heatGeneration))
+		pos -= 30
+		if(powerGeneration <= 0) { 
+			draw_text(x-450, y-pos, "Ship lacks enough power - increase power generation")
+			pos -= 20
+		}
+		if(heatGeneration > 0) {
+			draw_text(x-450, y-pos, "Ship heat generation too high - decrease heat generation")
+			pos -= 20
+		}
+		if(powerStorage <= 0) {
+			draw_text(x-450, y-pos, "Ship lacks power storage - cannot fire weapons")
+			pos -= 20
+		}
 	} else if(o_gameManager.menu == "Commodities") {
 		remainingCargo = "Remaing Cargo Space: " + string(o_gameManager.cargoRemaining)	
 		draw_text(x-450, y-pos, remainingCargo)
@@ -137,6 +174,15 @@ if(button != "Selector") {
 } else if(purchaseType != "") {
 	if(purchaseType != "Commodity") {
 		draw_text_transformed(x - 225, y - 15, item, 1, 1.25, 0)
+		if(purchaseType == "Weapon" or purchaseType == "Misc") {
+			if(moduleEquipped > 0) {
+				draw_text_transformed(x + 150, y - 15, "Equipped: " + string(moduleEquipped), 1, 1.25, 0)
+			}
+		} else if(purchaseType == "Thruster") {
+			if(moduleEquipped) {
+				draw_text_transformed(x + 150, y - 15, "Equipped", 1, 1.25, 0)
+			}
+		}
 	} else {
 		commodityText = o_gameManager.cargoNames[buttonID] + " - " + string(o_gameManager.cargoMainPrice[buttonID]) + " Credits"    
 		commodityText2 = "In Cargo: " + string(o_gameManager.inCargo[buttonID])
@@ -165,4 +211,17 @@ if(button == "OK") {
 		draw_text(x - 425, y - 440 + pos, missionString)
 		pos += 30
 	}
+}
+
+if(button == "Start Game") {
+	draw_text_transformed(x-330,y-450,"VOIDBORNE",8,8,0)
+	draw_text_transformed(x-110,y-295,"========Controls========",1,1,0)
+	draw_text_transformed(x-110,y-270,"WASD to move",1,1,0)
+	draw_text_transformed(x-110,y-245,"N to change target lock",1,1,0)
+	draw_text_transformed(x-110,y-220,"M to open star map",1,1,0)
+	draw_text_transformed(x-110,y-195,"P to enter Dev Mode",1,1,0)
+	draw_text_transformed(x-110,y-145,"======Dev Controls======",1,1,0)
+	draw_text_transformed(x-110,y-120,"C to give 100,000 credits",1,1,0)
+	draw_text_transformed(x-110,y-95,"Z to spawn random NPC",1,1,0)
+	draw_text_transformed(x-110,y-70,"H for invincibility",1,1,0)
 }

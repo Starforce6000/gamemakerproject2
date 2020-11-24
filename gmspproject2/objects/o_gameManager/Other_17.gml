@@ -22,6 +22,8 @@ if((selected != -1) && (inRange == true)) {
 		if(spawnedTurrets[i] != 0) {
 			if(spawnedTurrets[i].ship != player) {
 				instance_destroy(spawnedTurrets[i])	
+			} else {
+				spawnedTurrets[i].target = -1	
 			}
 		}
 	}

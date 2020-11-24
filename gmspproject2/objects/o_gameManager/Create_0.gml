@@ -5,14 +5,15 @@ playerManeuverID = 1
 playerGunports = [-1]
 playerTurretports = [-1]
 playerCredits = 10000
-modulesEquipped = 0
+modulesEquipped = 3
 gunsEquipped = 0
 turretsEquipped = 0
-playerModules = [-1]
+playerModules = [0, 6, 9]
 day = 1
 month = 1
 year = 2400
 system = 0
+devMode = false
 
 //Initialization
 player = 0

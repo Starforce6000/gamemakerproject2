@@ -1,4 +1,4 @@
-if(o_gameManager.menu == "") {
+if(o_gameManager.menu == "" && alive) {
 	if(!jumping) {
 		if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
 			image_angle += 2 * (turn / room_speed) * mass
@@ -42,8 +42,19 @@ if(o_gameManager.menu == "") {
 		shieldHP += shieldChargeRate / room_speed
 		shieldHP = min(shieldHP,maxShieldHP)
 	}
+	
+	shipEnergy += energyGeneration / room_speed
+	shipEnergy = min(shipEnergy, maxEnergy)
+	
+	if(hullHP <= 0 && alive = true) {
+		alive = false	
+		//for(i = 0; i < 5; i++) {
+			//instance_create_layer(x + irandom_range(-50,50), y+irandom_range(-50,50), "Foreground", o_explosion)
+		//}
+	}
 }
 
 if (invincible) {
-	hullHP = o_shipManager.baseHP[shipID]
+	shieldHP = maxShieldHP
+	hullHP = maxHullHP
 }

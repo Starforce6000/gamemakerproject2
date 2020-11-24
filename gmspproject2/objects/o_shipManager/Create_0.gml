@@ -1,4 +1,3 @@
-randomize()
 //SHIP INFO
 ships = 14
 shipNames = 
@@ -8,20 +7,7 @@ shipSprites =
 shipSize =
 ["small", "medium", "large", "medium", "medium", "small", "small", "large", "medium", "small", "medium", "small", "small", "small"]
 shipCost = 
-	[irandom_range(19000,21000), 
-	irandom_range(140000,160000), 
-	irandom_range(2400000,2600000), 
-	irandom_range(130000,140000), 
-	irandom_range(130000,150000), 
-	irandom_range(20000,30000), 
-	irandom_range(19000,21000), 
-	irandom_range(7000000,9000000), 
-	irandom_range(140000,160000), 
-	irandom_range(30000,40000), 
-	irandom_range(100000,140000), 
-	irandom_range(35000,45000), 
-	irandom_range(25000,35000), 
-	irandom_range(20000,30000)]
+[20000, 150000, 2500000, 135000, 140000, 25000, 20000, 8000000, 150000, 35000, 120000, 40000, 30000, 25000]
 outfitSpace =
 [120, 300, 700, 350, 350, 180, 200, 900, 400, 200, 320, 150, 120, 150]
 engineSpace =
@@ -37,7 +23,7 @@ baseHP =
 
 //OUTFIT INFO
 thrusterOutfits = 6
-weaponOutfits = 4
+weaponOutfits = 8
 miscOutfits = 15
 
 //Thrusters
@@ -49,10 +35,6 @@ thrusterType =
 ["main", "maneuvering",
 "main", "maneuvering",
 "main", "maneuvering"]
-thrusterSprite = 
-[s_smallThruster, s_smallRCS,
-s_mediumThruster, s_mediumRCS,
-s_largeThruster, s_largeRCS]
 thrusterSpaceUse =
 [30, 20,
 65, 50,
@@ -62,52 +44,72 @@ thrusterStats =
 7, 90,
 11,140]
 thrusterCost =
-	[irandom_range(4000,6000), 
-	irandom_range(4000,5000),
-	irandom_range(10000,20000), 
-	irandom_range(10000,18000),
-	irandom_range(75000,12500), 
-	irandom_range(80000,90000)]
+[5000, 4500,
+15000, 14000,
+100000, 85000]
 
 //Weapons
 weaponNames =
 ["Energy Blaster", "Triple Blaster Turret",
-"Laser Emitter", "Dual Laser Turret"]
+"Laser Emitter", "Dual Laser Turret",
+"Plasma Cannon", "Plasma Turret",
+"Particle Cannon", "Particle Turret"]
 weaponType = 
 ["gun", "turret",
+"gun", "turret",
+"gun", "turret",
 "gun", "turret"]
 weaponSprite = 
-[s_singleBlaster, s_tripleBlaster,
-s_laserEmitter, s_doubleBlaster]
+[0, s_tripleBlaster,
+0, s_laserEmitter,
+0, s_plasmaCannon,
+0, s_particleCannon]
 weaponSpaceUse = 
 [6, 22,
-8, 18]
+8, 18,
+30,45,
+35,50]
 damageShields = 
 [12, 12,
-8, 8]
+8, 8,
+50,50,
+100,100]
 damageHull =
 [6, 6,
-13, 13]
+13, 13,
+80,80,
+30,30]
 lifetime = 
 [1.5, 1.5,
-1.5, 1.5]
+1.5, 1.5,
+2,2,
+2,2]
 projectileSpeed =
 [12, 12,
-35, 19]
+19, 19,
+8,8,
+9,9]
 projectileSprites =
 [s_projectileBlaster, s_projectileBlaster,
-s_projectileLaser, s_projectileLaser]
+s_projectileLaser, s_projectileLaser,
+s_projectilePlasma, s_projectilePlasma,
+s_projectileParticle, s_projectileParticle]
 weaponEnergyUse =
-[10, 10,
-12, 12]
+[5, 5,
+6, 6,
+60,60,
+55,55]
 rate = 
 [10, 10/3,
-1, 14/2]
+14, 14/2,
+20, 20,
+22,22]
 weaponCost =
-	[irandom_range(500,1500), 
-	irandom_range(3000,4000),
-	irandom_range(1500,2500), 
-	irandom_range(5000,6000)]
+[1000, 3500,
+2000, 5500,
+20000, 25000,
+25000, 40000]
+
 
 //Misc Outfits
 //If an outfit doesn't use a certain property, set that to 0 for its value.
@@ -122,13 +124,13 @@ spaceUse =
 10, 75, 400,
 10, 50, 80,
 5, 25, 40,
-20,40,120]
+10,35,110]
 energyGeneration =
 [0, -50, 0,
 0, 0, 0,
 200, 1200, 3000,
 0, 0, 0,
--200,-380,-1000]
+-100,-400,-800]
 energyStorage =
 [0, 0, 0,
 0, 0, 0,
@@ -153,22 +155,12 @@ cargoCapacity =
 0, 0, 0,
 0, 0, 0,
 0,0,0]
-outfitCost =	
-	[irandom_range(500,1000), 
-	irandom_range(1250,1750), 
-	irandom_range(3250,3750),
-	irandom_range(250,750), 
-	irandom_range(7000,8000),	
-	irandom_range(30000,40000),
-	irandom_range(800,1200), 
-	irandom_range(9000,11000), 
-	irandom_range(40000,60000),
-	irandom_range(250,750), 
-	irandom_range(4000,6000), 
-	irandom_range(20000,30000),
-	irandom_range(2000,3000), 
-	irandom_range(10000,15000), 
-	irandom_range(40000,60000)]
+outfitCost =
+[750, 1500, 3500,
+500, 7500, 35000,
+1000, 10000, 50000,
+500, 5000, 25000,
+2500, 12500, 50000]
 
 //GUN LOCATIONS
 gunLocationsX =
@@ -221,3 +213,5 @@ turretLocationsY =
 -10,10,
 -30,30,-15,15,
 0]
+
+nextSpawnTimer = 2 * room_speed

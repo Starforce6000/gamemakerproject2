@@ -1,4 +1,4 @@
-if(o_gameManager.menu == "") {
+if(o_gameManager.menu == "" && alive) {
 	//Draw ship
 	draw_self()
 	
@@ -32,4 +32,8 @@ if(o_gameManager.menu == "") {
 	draw_rectangle_color(x - 70, y + 40, x + (140 * shieldHP / (maxShieldHP)) - 70, y + 50, c_blue, c_blue, c_blue, c_blue, false)
 	//Draw Health Bar
 	draw_rectangle_color(x - 70, y + 50, x + (140 * hullHP / (maxHullHP)) - 70, y + 60, c_orange, c_orange, c_orange, c_orange, false)
+	//Draw Energy Bar
+	draw_rectangle_color(x - 70, y + 60, x + (140 * shipEnergy / (maxEnergy)) - 70, y + 70, c_ltgray, c_ltgray, c_ltgray, c_ltgray, false)
+} else if(o_gameManager.menu == "") {
+	draw_text(x - 220, y, "Your ship was destroyed. Press R to restart.")
 }

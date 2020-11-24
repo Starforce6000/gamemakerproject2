@@ -12,7 +12,12 @@ for(i = 0; i < o_gameManager.npcAmt; i++) {
 		}
 	}
 }
-if(!found) {
+if(closestDistance > distance_to_object(o_gameManager.player)) {
+	closestDistance = distance_to_object(o_gameManager.player)
+	found = false
+}
+if(!found && distance_to_object(o_gameManager.player <= 2000)) {
+	warpOutCounter = -6 * room_speed
 	point = point_direction(x, y, o_playerShip.x, o_playerShip.y)
 	angle = angle_difference(image_angle, point)
 	image_angle -= min(abs(angle), (turn * mass) / room_speed) * sign(angle);
@@ -27,7 +32,8 @@ if(!found) {
 		target = -1	
 		firing = false
 	}
-} else {
+} else if(found) {
+	warpOutCounter = -6 * room_speed
 	point = point_direction(x, y, closestHostile.x, closestHostile.y)
 	angle = angle_difference(image_angle, point)
 	image_angle -= min(abs(angle), (turn * mass) / room_speed) * sign(angle);
@@ -42,6 +48,13 @@ if(!found) {
 		target = -1	
 		firing = false
 	}
+} else {
+	warpOutCounter++	
+	point = point_direction(x, y, 2500, 2500)
+	angle = angle_difference(image_angle,point)
+	image_angle -= min(abs(angle), (turn * mass) / room_speed) * sign(angle)
+	firing = false
+	target = -1
 }
 
 if(abs(angle) <= 30) {
@@ -63,11 +76,33 @@ if(target != lastTarget) {
 }
 lastTarget = target
 
+chargeDelay -= 1 / room_speed
+if(chargeDelay <= 0) {
+	shieldHP += shieldChargeRate / room_speed
+	shieldHP = min(shieldHP,maxShieldHP)
+}
+
+
 if(hullHP <= 0) {
+	o_gameManager.npcs[npcID] = 0
 	for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[turrets[i].turretID] = 0
 		instance_destroy(turrets[i])
 	}
 	for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
+		instance_destroy(guns[i])
+	}
+	instance_destroy()
+}
+if(warpOutCounter >= .5 * room_speed) {
+	o_gameManager.npcs[npcID] = 0
+	for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[turrets[i].turretID] = 0
+		instance_destroy(turrets[i])
+	}
+	for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
 		instance_destroy(guns[i])
 	}
 	instance_destroy()

@@ -9,9 +9,8 @@ if(o_gameManager.menu == "") {
 
 if(warpCharge > 0) {
 	shader_set(sh_white)
-	draw_sprite_ext(o_shipManager.shipSprites[shipID], 0,x,y, 1 + warpCharge / 6, 1 + warpCharge / 6,image_angle,c_white,warpCharge / 3)
+	draw_sprite_ext(o_shipManager.shipSprites[shipID], 0,x,y, 1 + warpCharge /(6 * room_speed), 1 + warpCharge / (6 * room_speed),image_angle,c_white,warpCharge / (0.5*room_speed))
 	shader_reset()
 }
-
 enemyDirection = point_direction(o_gameManager.player.x,o_gameManager.player.y,x,y)
 draw_sprite_ext(s_direction, 0, o_gameManager.player.x, o_gameManager.player.y, 3, 3, enemyDirection, c_white, 1)

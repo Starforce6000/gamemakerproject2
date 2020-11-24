@@ -36,5 +36,11 @@ if(o_gameManager.menu == "") {
 			}
 		}
 	}
+	
+	chargeDelay -= 1 / room_speed
+	if(chargeDelay <= 0) {
+		shieldHP += shieldChargeRate / room_speed
+		shieldHP = min(shieldHP,maxShieldHP)
+	}
 }
 

@@ -8,7 +8,11 @@ while(!found) {
 		found = true
 	} else {
 		if(o_gameManager.npcs[target] != 0) {
-			found = true
+			if(o_gameManager.npcs[target].aiType == "Pirater" or o_gameManager.npcs[target].aiType == "Bounty") {
+				found = true
+			} else {
+				target += 1
+			}
 		} else {
 			target += 1
 		}

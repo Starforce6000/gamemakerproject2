@@ -29,3 +29,13 @@ for(i = 0; i < turretAmt; i++) {
 }
 npcAmt = 0
 turretAmt = 0
+
+for(i = 0; i < missions; i++) {
+	if(missionLocations[i] != -1) {
+		if(missionType == "cargo" && missionLocations[i] != -1) {
+			playerCredits += missionRewards[i]
+			missionLocations[i] = -1
+			missionCargo -= missionQuantity[i]
+		}
+	}
+}

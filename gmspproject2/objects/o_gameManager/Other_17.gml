@@ -19,8 +19,10 @@ if((selected != -1) && (inRange == true)) {
 		instance_destroy(npcs[i])	
 	}
 	for(i = 0; i < turretAmt; i++) {
-		if(spawnedTurrets[i].ship != player) {
-			instance_destroy(spawnedTurrets[i])	
+		if(spawnedTurrets[i] != 0) {
+			if(spawnedTurrets[i].ship != player) {
+				instance_destroy(spawnedTurrets[i])	
+			}
 		}
 	}
 	npcAmt = 0
@@ -64,10 +66,12 @@ if((selected != -1) && (inRange == true)) {
 				npcManeuver = 1
 				npcShieldHP = 250
 			}
+			aiType = "Bounty"
 			npcs[npcAmt] = instance_create_layer(irandom_range(1000,4000),irandom_range(1000,4000),"Ships",o_bountyNPC)
 			with(npcs[npcAmt]) {
 				event_perform(ev_other, ev_user2)	
 			}
+			npcs[npcAmt].missionNum = i
 			npcAmt++
 		}
 	}

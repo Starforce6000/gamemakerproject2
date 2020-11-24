@@ -14,12 +14,12 @@ for(i = 0; i < o_gameManager.npcAmt; i++) {
 }
 angle = 0
 if(found) {
-	warpOutCounter = -5 * room_speed
+	warpOutCounter = -6 * room_speed
 	point = point_direction(x, y, closestHostile.x, closestHostile.y)
 	angle = angle_difference(image_angle, point)
 	image_angle -= min(abs(angle), (turn * mass) / room_speed) * sign(angle)
 } else {
-	warpOutCounter += 1	
+	warpOutCounter++
 	point = point_direction(x, y, o_station.x, o_station.y)
 	angle = angle_difference(image_angle, point)
 	image_angle -= min(abs(angle), (turn * mass) / room_speed) * sign(angle)
@@ -55,11 +55,32 @@ if(target != lastTarget) {
 }
 lastTarget = target
 
+chargeDelay -= 1 / room_speed
+if(chargeDelay <= 0) {
+	shieldHP += shieldChargeRate / room_speed
+	shieldHP = min(shieldHP,maxShieldHP)
+}
+
 if(hullHP <= 0) {
+	o_gameManager.npcs[npcID] = 0
 	for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[turrets[i].turretID] = 0
 		instance_destroy(turrets[i])
 	}
 	for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
+		instance_destroy(guns[i])
+	}
+	instance_destroy()
+}
+if(warpOutCounter >= .5 * room_speed) {
+	o_gameManager.npcs[npcID] = 0
+	for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[turrets[i].turretID] = 0
+		instance_destroy(turrets[i])
+	}
+	for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
 		instance_destroy(guns[i])
 	}
 	instance_destroy()

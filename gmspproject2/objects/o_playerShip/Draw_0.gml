@@ -20,7 +20,7 @@ if(o_gameManager.menu == "") {
 	system = o_gameManager.systemName[o_gameManager.system]
 	day = o_gameManager.day
 	year = o_gameManager.year
-	printStr = string(system) + " system - " + month + " " + string(day) + ", " + string(year)
+	printStr = string(system) + " system - " + month + " " + string(day) + ", " + string(year) + "     Credits: " + string(o_gameManager.playerCredits)
 	draw_text(x - 650, y + 350, printStr)
 	
 	//Draw jump progress bar

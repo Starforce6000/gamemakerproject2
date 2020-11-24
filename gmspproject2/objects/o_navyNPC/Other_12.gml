@@ -22,6 +22,7 @@ for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
 	with(turrets[i]) {
 		event_perform(ev_other, ev_user0)	
 	}
+	turrets[i].turretID = o_gameManager.turretAmt
 	o_gameManager.spawnedTurrets[o_gameManager.turretAmt] = turrets[i]
 	o_gameManager.turretAmt++
 }
@@ -48,6 +49,7 @@ for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
 	with(guns[i]) {
 		event_perform(ev_other, ev_user0)	
 	}
+	guns[i].turretID = o_gameManager.turretAmt
 	o_gameManager.spawnedTurrets[o_gameManager.turretAmt] = guns[i]
 	o_gameManager.turretAmt++
 }

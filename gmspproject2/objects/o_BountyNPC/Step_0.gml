@@ -33,13 +33,23 @@ if(target != lastTarget) {
 }
 lastTarget = target
 
+chargeDelay -= 1 / room_speed
+if(chargeDelay <= 0) {
+	shieldHP += shieldChargeRate / room_speed
+	shieldHP = min(shieldHP,maxShieldHP)
+}
+
 if(hullHP <= 0) {
 	o_gameManager.npcs[npcID] = 0
 	for(i = 0; i < o_shipManager.turretPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[turrets[i].turretID] = 0
 		instance_destroy(turrets[i])
 	}
 	for(i = 0; i < o_shipManager.gunPorts[shipID]; i++) {
+		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
 		instance_destroy(guns[i])
 	}
+	o_gameManager.missionLocations[missionNum] = -1
+	o_gameManager.playerCredits += o_gameManager.missionRewards[missionNum]
 	instance_destroy()
 }

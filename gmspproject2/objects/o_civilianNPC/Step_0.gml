@@ -13,10 +13,18 @@ if(o_station && aiType == "Lander") {
 	warpCharge++
 }
 
+chargeDelay -= 1 / room_speed
+if(chargeDelay <= 0) {
+	shieldHP += shieldChargeRate / room_speed
+	shieldHP = min(shieldHP,maxShieldHP)
+}
+
+
 if(hullHP <= 0) {
+	o_gameManager.npcs[npcID] = 0
 	instance_destroy()
 }
-if(warpCharge >= 3) {
+if(warpCharge >= .5 * room_speed) {
 	o_gameManager.npcs[npcID] = 0
 	instance_destroy()
 }

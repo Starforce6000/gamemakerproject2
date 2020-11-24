@@ -43,11 +43,17 @@ for(i = 0; i < irandom_range(10, 15); i++) {
 		}
 	}
 
-	do {
-		subMenuButton[i].location = irandom_range(0, systemCount - 1)
-	} until(subMenuButton[i].location != system)
+	if(subMenuButton[i].missionType == "bounty") {
+		do {
+			subMenuButton[i].location = irandom_range(0, systemCount - 1)
+		} until(subMenuButton[i].location != system)
+	} else {
+		do {
+			subMenuButton[i].location = irandom_range(0, systemCount - 1)
+		} until(subMenuButton[i].location != system && o_gameManager.systemInhabited[subMenuButton[i].location])
+	}
 	
-	if(subMenuButton[i].missionType = "cargo") {
+	if(subMenuButton[i].missionType == "cargo") {
 		subMenuButton[i].cargoAmount = irandom_range(10, 50)
 		if(subMenuButton[i].missionSize = "medium") {
 			subMenuButton[i].cargoAmount *= 4
@@ -57,7 +63,7 @@ for(i = 0; i < irandom_range(10, 15); i++) {
 		}
 	}
 	
-	if(subMenuButton[i].missionType = "bounty") {
+	if(subMenuButton[i].missionType == "bounty") {
 		subMenuButton[i].pay = irandom_range(6000, 12000)
 		subMenuButton[i].pay *= 2
 		if(subMenuButton[i].missionSize = "medium") {

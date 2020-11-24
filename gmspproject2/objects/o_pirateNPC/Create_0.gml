@@ -28,9 +28,9 @@ image_xscale = 0.7
 image_yscale = 0.7
 
 shieldHP = o_gameManager.npcShieldHP
-shieldChargeRate = shieldHP / 60
+shieldChargeRate = shieldHP / 20
 maxShieldHP = shieldHP
 hullHP = o_shipManager.baseHP[shipID]
 maxHullHP = hullHP
-charging = true
 chargeDelay = 0
+warpOutCounter = -6 * room_speed

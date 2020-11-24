@@ -18,7 +18,7 @@ pauseSpeed = 0
 firing = false
 systemJumpTimer = -1
 jumping = false
-
+aiType = "player"
 target = -1
 
 shieldHP = 0

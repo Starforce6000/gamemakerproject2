@@ -26,6 +26,7 @@ if(o_gameManager.menu == "") {
 			shot.image_yscale = 0.6
 			shot.speed = o_shipManager.projectileSpeed[turretType]
 			shot.owner = ship
+			shot.aiType = ship.aiType
 		}
 	}
 }

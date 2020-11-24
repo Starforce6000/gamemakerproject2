@@ -4,7 +4,7 @@ playerThrusterID = 0
 playerManeuverID = 1
 playerGunports = [-1]
 playerTurretports = [-1]
-playerCredits = 10000000
+playerCredits = 10000
 modulesEquipped = 0
 gunsEquipped = 0
 turretsEquipped = 0
@@ -87,3 +87,5 @@ playButton = instance_create_layer(700, 500, "UI", o_button)
 playButton.button = "Start Game"
 
 menu = "main"
+
+audio_play_sound(BackgroundMusic, 2, 999);

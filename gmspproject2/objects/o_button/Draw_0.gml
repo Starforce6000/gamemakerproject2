@@ -33,6 +33,7 @@ if(button == "Purchase") {
 		}
 		pos -= 30
 		draw_text(x-450, y-pos, stats)
+		draw_sprite_ext(o_shipManager.thrusterSprite[o_gameManager.purchaseID],o_shipManager.thrusterSprite[o_gameManager.purchaseID],x-350,y-125,2,2,0,c_white,1)
 	} else if(o_gameManager.purchaseType == "Weapon") {
 		cost = "Cost: " + string(o_shipManager.weaponCost[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, cost)
@@ -52,6 +53,7 @@ if(button == "Purchase") {
 		perSecond = "Shots Per Second: " + string(room_speed / o_shipManager.rate[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, perSecond)
 		pos -= 30
+		draw_sprite_ext(o_shipManager.weaponSprite[o_gameManager.purchaseID],o_shipManager.weaponSprite[o_gameManager.purchaseID],x-350,y-125,2,2,0,c_white,1)
 	} else if(o_gameManager.purchaseType == "Ship") {
 		cost = "Cost: " + string(o_shipManager.shipCost[o_gameManager.purchaseID])
 		shipOutfit = "Ship Outfit Space: " + string(o_shipManager.outfitSpace[o_gameManager.purchaseID])
@@ -72,6 +74,7 @@ if(button == "Purchase") {
 		baseHull = "Base Hull Strength: " + string(o_shipManager.baseHP[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, baseHull)
 		pos -= 30
+		draw_sprite(o_shipManager.shipSprites[o_gameManager.purchaseID],o_shipManager.shipSprites[o_gameManager.purchaseID],x-25,y-175)
 	} else if(o_gameManager.purchaseType == "Misc") {
 		cost = "Cost: " + string(o_shipManager.outfitCost[o_gameManager.purchaseID])
 		draw_text(x-450, y-pos, cost)

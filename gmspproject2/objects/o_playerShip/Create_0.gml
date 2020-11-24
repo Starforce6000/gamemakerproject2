@@ -32,3 +32,5 @@ hullHP = o_shipManager.baseHP[shipID]
 maxHullHP = hullHP
 charging = true
 chargeDelay = 0
+
+invincible = false

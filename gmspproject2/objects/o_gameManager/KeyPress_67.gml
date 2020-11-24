@@ -1,0 +1,1 @@
+playerCredits += 1000000

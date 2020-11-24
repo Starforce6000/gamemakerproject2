@@ -36,6 +36,7 @@
     {"isDnD":false,"eventNum":21,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":22,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":90,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":67,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_gameManager","path":"objects/o_gameManager/o_gameManager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

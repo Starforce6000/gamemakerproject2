@@ -44,3 +44,6 @@ if(o_gameManager.menu == "") {
 	}
 }
 
+if (invincible) {
+	hullHP = o_shipManager.baseHP[shipID]
+}

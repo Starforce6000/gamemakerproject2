@@ -1,3 +1,4 @@
+
 angle = 0
 if(o_station && aiType == "Lander") {
 	point = point_direction(x, y, o_station.x, o_station.y)

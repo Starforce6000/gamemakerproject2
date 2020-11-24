@@ -13,3 +13,8 @@ missionSize = ""
 cargoAmount = 0
 pay = 0
 location = 0
+
+//COMPLETED CARGO MISSIONS
+pay = [0]
+amount = [0]
+completedMissions = 0

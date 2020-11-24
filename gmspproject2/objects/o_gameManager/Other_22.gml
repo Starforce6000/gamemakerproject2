@@ -91,16 +91,19 @@ if(piracy >= 6) {
 	} else {
 		randomSpawnShip = irandom_range(0,o_shipManager.ships - 1)
 		npcShip = randomSpawnShip
+		npcBounty = irandom_range(2500, 5000)
 		if(o_shipManager.shipSize[randomSpawnShip] == "medium") {
 			npcThruster = 2
 			npcManeuver = 3
 			npcShieldHP = 500
 			piracy++
+			npcBounty *= 3
 		} else if(o_shipManager.shipSize[randomSpawnShip] == "large") {
 			npcThruster = 4
 			npcManeuver	= 5
 			npcShieldHP = 1500
 			piracy += 2
+			npcBounty *= 6
 		} else {
 			npcThruster = 0
 			npcManeuver = 1

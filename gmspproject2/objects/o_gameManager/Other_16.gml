@@ -27,15 +27,25 @@ for(i = 0; i < npcAmt; i++) {
 for(i = 0; i < turretAmt; i++) {
 	instance_destroy(spawnedTurrets[i])	
 }
+instance_destroy(payUI)
 npcAmt = 0
 turretAmt = 0
 
+completedMissions = 0
+completeButton = instance_create_layer(683,500,"UI",o_button)
+completeButton.button = "OK"
 for(i = 0; i < missions; i++) {
 	if(missionLocations[i] != -1) {
 		if(missionType == "cargo" && missionLocations[i] != -1) {
+			completeButton.pay[completedMissions] = missionRewards[i]
+			completeButton.amount[completedMissions] = missionQuantity[i]
+			completeButton.completedMissions++
+			
 			playerCredits += missionRewards[i]
 			missionLocations[i] = -1
 			missionCargo -= missionQuantity[i]
+			completedMissions++
 		}
 	}
 }
+

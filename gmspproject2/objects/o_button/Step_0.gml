@@ -78,6 +78,9 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 				event_perform(ev_other, ev_user9)	
 			}
 			break
+		case "OK":
+			instance_destroy()
+			break
 	}
 }
 if(o_gameManager.menu == "Outfits" && button == "Selector") {
@@ -87,4 +90,8 @@ if(o_gameManager.menu == "Outfits" && button == "Selector") {
 	if (keyboard_check(vk_down) || keyboard_check(ord("S"))) {
 		y -= (300 / room_speed)
 	}
+}
+
+if(button == "OK" and o_gameManager.menu != "station") {
+	instance_destroy()	
 }

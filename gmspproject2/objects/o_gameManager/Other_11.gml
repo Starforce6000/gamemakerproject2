@@ -32,3 +32,5 @@ for(i = 0; i < 500; i++) {
 	star.image_xscale = starScale
 	star.image_yscale = starScale
 }
+
+payUI = instance_create_layer(0, 0, "UI", o_payoutUI)

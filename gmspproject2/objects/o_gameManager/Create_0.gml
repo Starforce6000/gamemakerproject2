@@ -55,6 +55,11 @@ turretAmt = 0
 aiType = ""
 spawnTimer = 1 * room_speed
 piracy = 0
+npcBounty = 0
+
+payUI = 0
+payout = 0
+payoutShip = 0
 
 //CONSTANTS
 monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]

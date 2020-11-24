@@ -12,6 +12,7 @@
     {"id":{"name":"o_civilianNPC","path":"objects/o_civilianNPC/o_civilianNPC.yy",},"order":1,},
     {"id":{"name":"s_metals","path":"sprites/s_metals/s_metals.yy",},"order":2,},
     {"id":{"name":"o_divider","path":"objects/o_divider/o_divider.yy",},"order":4,},
+    {"id":{"name":"o_payoutUI","path":"objects/o_payoutUI/o_payoutUI.yy",},"order":15,},
     {"id":{"name":"r_Polaris","path":"rooms/r_Polaris/r_Polaris.yy",},"order":19,},
     {"id":{"name":"s_electricHeatsink","path":"sprites/s_electricHeatsink/s_electricHeatsink.yy",},"order":1,},
     {"id":{"name":"s_menuBar","path":"sprites/s_menuBar/s_menuBar.yy",},"order":2,},

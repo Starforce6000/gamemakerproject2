@@ -93,6 +93,14 @@ if(hullHP <= 0) {
 		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
 		instance_destroy(guns[i])
 	}
+	if(playerHullDamage > 0) {
+		o_gameManager.payout = bountyPayout * (maxHullHP / playerHullDamage)
+		o_gameManager.playerCredits += bountyPayout * (maxHullHP /  playerHullDamage)
+		o_gameManager.payoutShip = shipID
+		with(o_gameManager.payUI) {
+			event_perform(ev_other,ev_user0)
+		}
+	}
 	instance_destroy()
 }
 if(warpOutCounter >= .5 * room_speed) {

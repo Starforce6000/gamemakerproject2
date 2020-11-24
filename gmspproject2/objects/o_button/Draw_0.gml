@@ -150,3 +150,16 @@ if(button != "Selector") {
 	draw_text_transformed(x - 225, y - 15, missionString, 1, 1.25, 0)
 	draw_text_transformed(x + 150, y - 15, missionString2, 1, 1.25, 0)
 }
+
+if(button == "OK") {
+	pos = 0
+	draw_sprite_ext(s_box, 0, x, y - 300, 15, 5, 0, c_white, 1)
+	dockString = "You dock at " + o_gameManager.systemName[o_gameManager.system] + " station, and take some time to refuel/repair your ship."
+	draw_text(x - 425, y - 440 + pos, dockString)
+	pos += 30
+	for(i = 0; i < completedMissions; i++) {
+		missionString = "You deliver the " + string(amount[i]) + " units of cargo to the station staff, and recieve " + string(pay[i]) + " credits in return." 
+		draw_text(x - 425, y - 440 + pos, missionString)
+		pos += 30
+	}
+}

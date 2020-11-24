@@ -23,9 +23,12 @@ pauseSpeed = 0
 target = -1
 lastTarget = -1
 aiType = o_gameManager.aiType
+bountyPayout = o_gameManager.npcBounty
 
 image_xscale = 0.7
 image_yscale = 0.7
+
+playerHullDamage = 0
 
 shieldHP = o_gameManager.npcShieldHP
 shieldChargeRate = shieldHP / 20

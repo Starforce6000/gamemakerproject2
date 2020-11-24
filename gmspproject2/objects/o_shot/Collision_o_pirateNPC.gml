@@ -7,3 +7,6 @@ if(owner == o_gameManager.player or aiType == "Patroller") {
 	}
 	instance_destroy()
 }
+if(owner == o_gameManager.player and other.shieldHP <= 0) {
+	other.playerHullDamage += hull	
+}

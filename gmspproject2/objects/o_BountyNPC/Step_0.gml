@@ -49,6 +49,11 @@ if(hullHP <= 0) {
 		o_gameManager.spawnedTurrets[guns[i].turretID] = 0
 		instance_destroy(guns[i])
 	}
+	o_gameManager.payout = bountyPayout
+	o_gameManager.payoutShip = shipID
+	with(o_gameManager.payUI) {
+		event_perform(ev_other,ev_user0)
+	}
 	o_gameManager.missionLocations[missionNum] = -1
 	o_gameManager.playerCredits += o_gameManager.missionRewards[missionNum]
 	instance_destroy()
